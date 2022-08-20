@@ -9,7 +9,7 @@ html {
 body {
     background-color: white;
     font-family: "Kalam", cursive, sans-serif;
-    font-weight: 400;
+    font-size: 1.2rem;
     color: #252525;
     text-align: center;
 }
@@ -25,4 +25,10 @@ body {
 
 .logo {
     height: 30vh;
+}
+
+.start-btn {
+    font-family: 'Amatic SC', cursive, sans-serif;
+    color: black;
+    font-size: larger;
 }
