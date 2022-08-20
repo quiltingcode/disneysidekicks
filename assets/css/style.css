@@ -1,2 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Kalam:wght@300&display=swap');
 
+/* --------- Global style */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: white;
+    font-family: "Kalam", cursive, sans-serif;
+    font-weight: 400;
+    color: #252525;
+    text-align: center;
+}
+
+/* --------- Heading */
+
+.heading {
+    font-family: 'Amatic SC', cursive, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.logo {
+    height: 30vh;
+}
