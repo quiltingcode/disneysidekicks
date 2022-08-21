@@ -21,37 +21,42 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /**
  * When the Start Button is clicked, the game area changes.
- * The start quiz intro and button are removed, 
- * and the first question is displayed.
+ * The start quiz intro and start button are removed, 
+ * and the display question function is called.
  */
 
 function showGame() {
     let hidden = document.getElementById("hide");
     let intro = document.getElementById("intro-text");
+    let score = document.getElementById("score");
     hidden.style.display = "block";
     intro.style.display = "none";
     displayQuestion();
+    score = 0;
 }
-    
     
 function displayQuestion() {
+    let questionNumber = document.getElementById("question-number");
+    let quizQuestion = document.getElementById("question");
+    let answerOne = document.getElementById("answer-a");
+    let answerTwo = document.getElementById("answer-b");
+    let answerThree = document.getElementById("answer-c");
+    for (let i = questions; i < questions.length; i++);
 
 }
     
 
-
 function checkAnswer() {
-
+    let answerButtons = document.getElementsByClassName("answer-btn");
+    for(let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].addEventListener('click', checkAnswer);
+    }
 }
 
 function incrementScore() {
 
-
 }
 
-function displayQuestion() {
-
-}
 
 function endGame() {
 
