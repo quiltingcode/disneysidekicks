@@ -16,8 +16,37 @@ document.addEventListener("DOMContentLoaded", function() {
 
 })
 
-function runGame() {
+//List of Quiz questions
 
+let questions = [
+    {
+        question : "Which Disney princess has a pet tiger?",
+        answer1 : "Raya",
+        answer2 : "Jasmine",
+        answer3 : "Moana",
+        correct : "Jasmine",
+        image : "",
+    },
+    {
+        question : "Which famous canine couple are owned by Roger and Anita?",
+        answer1 : "Pongo and Perdi",
+        answer2 : "Bernard and Bianca",
+        answer3 : "Flotsam and Jetsam",
+        correct : "Pongo and Perdi",
+        image : "",
+    }
+]
+
+function runGame() {
+    let hidden = document.getElementsByClassName("hide");
+    for (let i = 0; i < hidden.length; i++) {
+        if (i.style.display === "none") {
+            i.style.display = "block";
+        } else {
+            i.style.display = "none";
+        }
+    }
+    
 }
 
 function checkAnswer() {
