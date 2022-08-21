@@ -32,3 +32,7 @@ body {
     color: black;
     font-size: larger;
 }
+
+#hide {
+    display: none;
+}

@@ -2,19 +2,61 @@
 //Get the button elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+    let buttons = document.getElementsByTagName("button"); 
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "start-quiz") {
-                runGame()
+                showGame();
             } else {
-                
+                let gameType = this.getAttribute("data-type");
+                alert(`You clicked ${gameType}`);
             }
-        })
+        });
     }
 
-})
+});
+
+
+
+/**
+ * When the Start Button is clicked, the game area changes.
+ * The start quiz intro and button are removed, 
+ * and the first question is displayed.
+ */
+
+function showGame() {
+    let hidden = document.getElementById("hide");
+    let intro = document.getElementById("intro-text");
+    hidden.style.display = "block";
+    intro.style.display = "none";
+    displayQuestion();
+}
+    
+    
+function displayQuestion() {
+
+}
+    
+
+
+function checkAnswer() {
+
+}
+
+function incrementScore() {
+
+
+}
+
+function displayQuestion() {
+
+}
+
+function endGame() {
+
+}
+
 
 //List of Quiz questions
 
@@ -36,32 +78,3 @@ let questions = [
         image : "",
     }
 ]
-
-function runGame() {
-    let hidden = document.getElementsByClassName("hide");
-    for (let i = 0; i < hidden.length; i++) {
-        if (i.style.display === "none") {
-            i.style.display = "block";
-        } else {
-            i.style.display = "none";
-        }
-    }
-    
-}
-
-function checkAnswer() {
-
-}
-
-function incrementScore() {
-
-
-}
-
-function displayQuestion() {
-
-}
-
-function endGame() {
-
-}

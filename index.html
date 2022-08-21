@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +8,36 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <h1 class="heading">Disney Sidekicks Quiz
-        
-    </h1>
-    <img class="logo" src="assets/images/mickeyandpluto1.png" alt="disney logo of Mickey and Pluto hugging">
+    <h1 class="heading">Disney Sidekicks Quiz</h1>
+    <img class="logo" src="assets/images/mickeyandpluto1.png" alt="disney logo of Mickey and Pluto hugging" id="question-img">
     <div class="game-area">
-        <div class="question-area">
+        <div class="question-area" id="intro-text">
             <p>How well do you know your Disney sidekicks?</p>
             <p>Take this quiz to find out...</p>
             <button class="start-btn" data-type="start-quiz">Start Quiz</button>
         </div>
+
+        <div id="hide">
+            <div>
+                <p id="question-number"></p>
+                <p id="quiz-question"></p>
+            </div>
+
+            <div class="answer-area" hide>
+                <span>A</span><button class="answer-btn" id="answer-a"></button>
+                <span>B</span><button class="answer-btn" id="answer-b"></button>
+                <span>C</span><button class="answer-btn" id="answer-c"></button>
+            </div>
         
-        <div class="hide">
-            <p id="question-number"></p>
-            <p id="quiz-question"></p>
-        </div>
-            
-        <div class="answer-area" hide>
-            <span>A</span><button class="answer-btn" id="answer-a"></button>
-            <span>B</span><button class="answer-btn" id="answer-b"></button>
-            <span>C</span><button class="answer-btn" id="answer-c"></button>
+            <div class="score-area" hide>
+                <p class="score">Score  <span id="score">0</span></p>
+            </div>
         </div>
     </div>
-    <div class="score-area" hide></div>
-        <p class="score">Score<span id="score">0</span></p>
-    
+
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
