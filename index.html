@@ -11,32 +11,35 @@
 
 <body>
     <h1 class="heading">Disney Sidekicks Quiz</h1>
-    <img class="logo" src="assets/images/mickeyandpluto1.png" alt="disney logo of Mickey and Pluto hugging" id="question-img">
+    
     <div class="game-area">
-        <div class="question-area" id="intro-text">
+        <img class="logo" src="assets/images/mickeyandpluto1.png" alt="disney logo of Mickey and Pluto hugging" id="question-img">
+        <div class="intro-area">
             <p>How well do you know your Disney sidekicks?</p>
             <p>Take this quiz to find out...</p>
+            
+        </div>
+        <div class="control-btns">
             <button class="start-btn" data-type="start-quiz">Start Quiz</button>
+            <button class="next-btn" data-type="next">Next</button>
         </div>
 
-        <div id="hide">
+        <div class="hide" id="question-area">
             <h3 id="question-title">Question  <span id="question-number">1</span>   
             </h3>
 
-            <h4>
-                <p id="question"></p>
-            </h4>
+            <h4 id="question"></h4>
 
-            <div class="answer-area" hide>
-                <span>A</span><button class="answer-btn" id="answer-a"></button>
-                <span>B</span><button class="answer-btn" id="answer-b"></button>
-                <span>C</span><button class="answer-btn" id="answer-c"></button>
-            </div>
-        
-            <div class="score-area" hide>
-                <p class="score">Score  <span id="score">0</span></p>
-            </div>
+        <div class="answer-area hide" >
+            <button class="answer-btn" id="answer-a"></button>
+            <button class="answer-btn" id="answer-b"></button>
+            <button class="answer-btn" id="answer-c"></button>
         </div>
+        
+        <div class="score-area hide">
+                <p class="score">Score  <span id="score">0</span></p>
+        </div>
+       
     </div>
 
     <script src="assets/js/script.js"></script>

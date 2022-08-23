@@ -33,7 +33,7 @@ body {
     font-size: larger;
 }
 
-#hide {
+.hide {
     display: none;
 }
 
