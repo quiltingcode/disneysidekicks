@@ -1,21 +1,23 @@
 // Wait for the DOM to finish loading before running the game
 //Get the button elements and add event listeners to them
 
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button"); 
 
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "start-quiz") {
-                showGame();
-            } else {
-                let gameType = this.getAttribute("data-type");
-                alert(`You clicked ${gameType}`);
-            }
-        });
-    }
+let startButton = document.getElementById("start-button"); 
+let introArea = document.getElementById("intro-area");
+let questionArea = document.getElementById("question-area");
 
-});
+startButton.addEventListener('click', runGame);
+
+function runGame() {
+    console.log("Started");
+    startButton.classList.add('hide');
+    introArea.classList.add('hide');
+    questionArea.classList.remove('hide');
+}
+
+   
+
+
 
 
 
@@ -38,10 +40,7 @@ function showGame() {
 function displayQuestion() {
     let questionNumber = document.getElementById("question-number");
     let quizQuestion = document.getElementById("question");
-    let answerOne = document.getElementById("answer-a");
-    let answerTwo = document.getElementById("answer-b");
-    let answerThree = document.getElementById("answer-c");
-    for (let i = questions; i < questions.length; i++);
+   
 
 }
     

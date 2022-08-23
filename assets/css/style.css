@@ -12,21 +12,29 @@ body {
     color: #252525;
     text-align: center;
     background-color: darkcyan;
+    margin: 0;
 }
 
-/* --------- Heading */
+/* Heading */
 
 .heading {
     font-family: 'Amatic SC', cursive, sans-serif;
     font-weight: 700;
     text-align: center;
-    font-size: 3.7rem;
-    margin: 5%;
+    font-size: 3rem;
 }
 
 .logo {
     height: 18vh;
     
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+h4 {
+    margin: 0;
 }
 
 #game-area {
@@ -51,6 +59,10 @@ body {
     margin: 10px;
 }
 
+#question-title {
+    margin: 2%;
+}
+
 
 .answer-area {
     display: grid;
@@ -68,7 +80,7 @@ body {
     border-radius: 5px;
 }
 
-.answer-btn:hover {
+.btn:hover {
     border: 3px solid black;
 }
 
