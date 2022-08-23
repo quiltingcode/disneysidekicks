@@ -5,21 +5,9 @@
 let startButton = document.getElementById("start-button"); 
 let introArea = document.getElementById("intro-area");
 let questionArea = document.getElementById("question-area");
+let score = document.getElementById("score");
 
 startButton.addEventListener('click', runGame);
-
-function runGame() {
-    console.log("Started");
-    startButton.classList.add('hide');
-    introArea.classList.add('hide');
-    questionArea.classList.remove('hide');
-}
-
-   
-
-
-
-
 
 /**
  * When the Start Button is clicked, the game area changes.
@@ -27,16 +15,15 @@ function runGame() {
  * and the display question function is called.
  */
 
-function showGame() {
-    let hidden = document.getElementById("hide");
-    let intro = document.getElementById("intro-text");
-    let score = document.getElementById("score");
-    hidden.style.display = "block";
-    intro.style.display = "none";
-    displayQuestion();
+function runGame() {
+    console.log("Started");
+    startButton.classList.add('hide');
+    introArea.classList.add('hide');
+    questionArea.classList.remove('hide');
     score = 0;
+    displayQuestion();
 }
-    
+
 function displayQuestion() {
     let questionNumber = document.getElementById("question-number");
     let quizQuestion = document.getElementById("question");
@@ -67,18 +54,23 @@ function endGame() {
 let questions = [
     {
         question : "Which Disney princess has a pet tiger?",
-        answer1 : "Raya",
-        answer2 : "Jasmine",
-        answer3 : "Moana",
-        correct : "Jasmine",
-        image : "",
+        answers : [
+            {text: 'Jasmine'},
+            {text: 'Moana'},
+            {text: 'Raya'},
+            {correct: 'Jasmine'},
+            {imgFile: 'rajah.png'}
+        ] 
     },
     {
         question : "Which famous canine couple are owned by Roger and Anita?",
-        answer1 : "Pongo and Perdi",
-        answer2 : "Bernard and Bianca",
-        answer3 : "Flotsam and Jetsam",
-        correct : "Pongo and Perdi",
-        image : "",
-    }
+        answers : [
+            {text: "Pongo and Perdi"},
+            {text: "Bernard and Bianca"},
+            {text: "Flotsam and Jetsam"},
+            {correct: "Pongo and Perdi"},
+            {imgFile: 'rajah.png'}
+        ] 
+    },
+   
 ]
