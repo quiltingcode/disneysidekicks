@@ -41,19 +41,39 @@ body {
 
 }
 
-.start-btn, .next-btn {
+.start-btn, .next-btn, .home-btn {
     font-family: 'Amatic SC', cursive, sans-serif;
     color: black;
     font-size: larger;
     padding: 10px;
+    border: 2px solid darkcyan;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+
+.answer-area {
+    display: grid;
+    gap: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.answer-btn {
+    font-family: "Kalam", cursive, sans-serif;
+    color: black;
+    font-size: larger;
+    padding: 10px;
+    border: 2px solid darkcyan;
+    border-radius: 5px;
+}
+
+.answer-btn:hover {
+    border: 3px solid black;
 }
 
 .hide {
     display: none;
-}
-
-.answer-btn {
-    padding: 10px;
 }
 
 .btn-correct {
