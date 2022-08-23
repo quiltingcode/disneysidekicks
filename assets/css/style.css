@@ -12,6 +12,7 @@ body {
     font-size: 1.2rem;
     color: #252525;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* --------- Heading */
@@ -20,14 +21,18 @@ body {
     font-family: 'Amatic SC', cursive, sans-serif;
     font-weight: 700;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.7rem;
 }
 
 .logo {
-    height: 30vh;
+    height: 18vh;
 }
 
-.start-btn {
+#game-area {
+
+}
+
+.start-btn, .next-btn {
     font-family: 'Amatic SC', cursive, sans-serif;
     color: black;
     font-size: larger;
@@ -39,4 +44,12 @@ body {
 
 .answer-btn {
     
+}
+
+.btn-correct {
+    background-color: green;
+}
+
+.btn-wrong {
+    background-color: red;
 }

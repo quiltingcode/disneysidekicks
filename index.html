@@ -12,9 +12,9 @@
 <body>
     <h1 class="heading">Disney Sidekicks Quiz</h1>
     
-    <div class="game-area">
+    <div id="game-area">
         <img class="logo" src="assets/images/mickeyandpluto1.png" alt="disney logo of Mickey and Pluto hugging" id="question-img">
-        <div class="intro-area">
+        <div id="intro-area">
             <p>How well do you know your Disney sidekicks?</p>
             <p>Take this quiz to find out...</p>
             
@@ -24,20 +24,21 @@
             <button class="next-btn" data-type="next">Next</button>
         </div>
 
-        <div class="hide" id="question-area">
+        <div id="question-area" class="hide" >
             <h3 id="question-title">Question  <span id="question-number">1</span>   
             </h3>
 
             <h4 id="question"></h4>
+        </div>    
 
-        <div class="answer-area hide" >
-            <button class="answer-btn" id="answer-a"></button>
-            <button class="answer-btn" id="answer-b"></button>
-            <button class="answer-btn" id="answer-c"></button>
+        <div id="answer-area" class="hide">
+            <button class="answer-btn" id="answer1"></button>
+            <button class="answer-btn" id="answer2"></button>
+            <button class="answer-btn" id="answer3"></button>
         </div>
         
-        <div class="score-area hide">
-                <p class="score">Score  <span id="score">0</span></p>
+        <div id="score-area" class="hide">
+                <p id="score">Score  <span id="score">0</span></p>
         </div>
        
     </div>
