@@ -11,8 +11,9 @@ body {
     font-size: 1.5rem;
     color: #252525;
     text-align: center;
-    background-color: darkcyan;
+    background-color: #c59fc9;
     margin: 0;
+    
 }
 
 /* Heading */
@@ -45,7 +46,7 @@ h4 {
     text-align: center;
     justify-content: center;
     box-shadow: 0 0 10px 2px;
-    background-color: rgb(192, 239, 239);
+    background-color: #a4def9;
 
 }
 
@@ -53,7 +54,7 @@ h4 {
     font-family: 'Amatic SC', cursive, sans-serif;
     color: black;
     font-size: larger;
-    padding: 10px;
+    padding: 8px;
     border: 2px solid darkcyan;
     border-radius: 5px;
     margin: 10px;
@@ -74,8 +75,8 @@ h4 {
 .answer-btn {
     font-family: "Kalam", cursive, sans-serif;
     color: black;
-    font-size: larger;
-    padding: 10px;
+    font-size: large;
+    padding: 8px;
     border: 2px solid darkcyan;
     border-radius: 5px;
 }
@@ -86,6 +87,14 @@ h4 {
 
 .hide {
     display: none;
+}
+
+#score-area {
+    padding: 0px 20px 0px 20px;
+}
+
+#score {
+    margin: 5px;
 }
 
 .btn-correct {

@@ -3,9 +3,12 @@
 
 
 let startButton = document.getElementById("start-button"); 
+let nextButton = document.getElementById("next-button");
 let introArea = document.getElementById("intro-area");
 let questionArea = document.getElementById("question-area");
 let score = document.getElementById("score");
+
+let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', runGame);
 
@@ -20,13 +23,14 @@ function runGame() {
     startButton.classList.add('hide');
     introArea.classList.add('hide');
     questionArea.classList.remove('hide');
+    nextButton.classList.add('hide');
     score = 0;
+
     displayQuestion();
 }
 
 function displayQuestion() {
-    let questionNumber = document.getElementById("question-number");
-    let quizQuestion = document.getElementById("question");
+   
    
 
 }
