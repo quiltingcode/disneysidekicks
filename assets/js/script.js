@@ -52,17 +52,22 @@ function displayQuestion(question) {
         answerOne.innerText = question.answers[0].text;
         answerTwo.innerText = question.answers[1].text;
         answerThree.innerText = question.answers[2].text;
-        console.log(answerOne);
+        questionImg = question.answers.imgFile;
     }
-    
-}
-    
-
-function checkAnswer() {
-    
-    for(let i = 0; i < answerButtons.length; i++) {
+    for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].addEventListener('click', checkAnswer);
     }
+}
+    
+    
+function checkAnswer() {
+    console.log('checking answer');
+    if (this.innerText === question.answers.correct) {
+        this.classList.add('btn-correct');
+    } else {
+        this.classList.add('btn-wrong');
+    } 
+    
 }
 
 function incrementScore() {
@@ -81,11 +86,11 @@ let questions = [
     {
         question : "Which Disney princess has a pet tiger?",
         answers : [
-            {a: 'Jasmine'},
-            {b: 'Moana'},
-            {c: 'Raya'},
+            {text: 'Jasmine'},
+            {text: 'Moana'},
+            {text: 'Raya'},
             {correct: 'Jasmine'},
-            {imgFile: 'rajah.png'}
+            {imgFile: src='assets/images/rajah.png'}
         ] 
     },
     {
@@ -95,8 +100,17 @@ let questions = [
             {text: "Bernard and Bianca"},
             {text: "Flotsam and Jetsam"},
             {correct: "Pongo and Perdi"},
-            {imgFile: 'rajah.png'}
+            {imgFile: src='assets/images/rajah.png'}
         ] 
     },
-   
+    {
+        question : "What are the names of Beast's trusty household helpers?",
+        answers : [
+            {text: "Chip and Dale"},
+            {text: "Cogsworth and Lumiere"},
+            {text: "Donald and Daffy"},
+            {correct: "Cogsworth and Lumiere"},
+            {imgFile: src='assets/images/rajah.png'}
+        ] 
+    },
 ]
