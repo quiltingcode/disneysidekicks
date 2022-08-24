@@ -8,6 +8,7 @@ let introArea = document.getElementById("intro-area");
 let questionArea = document.getElementById("question-area");
 let score = document.getElementById("score");
 let questionElement = document.getElementById("question");
+let questionNumber = document.getElementById("question-number");
 let answerElements = document.getElementById("answer-area");
 let answerButtons = document.getElementsByClassName("answer-btn");
 let answerOne = document.getElementById("answer1");
@@ -36,38 +37,39 @@ function runGame() {
     shuffledQuestions = questions.sort(function () {
         return Math.random() - 0.5;
       });
-      console.log(shuffledQuestions);
     currentQuestionIndex = 0
     shuffle();
 }
 
 function shuffle() {
    displayQuestion(shuffledQuestions[currentQuestionIndex])
+   console.log("Shuffled");
    
 }
 
 function displayQuestion(question) {
     questionElement.innerText = question.question;
     for (i of questions) {
-        answerOne.innerText = question.answers[0].text;
-        answerTwo.innerText = question.answers[1].text;
-        answerThree.innerText = question.answers[2].text;
-        questionImg = question.answers.imgFile;
+        answerOne.innerText = question.answer1;
+        answerTwo.innerText = question.answer2;
+        answerThree.innerText = question.answer3;
+        // questionImg = question.answers[5].img;
     }
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].addEventListener('click', checkAnswer);
     }
 }
     
-    
-function checkAnswer() {
-    console.log('checking answer');
-    if (this.innerText === question.answers.correct) {
-        this.classList.add('btn-correct');
+function checkAnswer(e, question) {
+    console.log('Checking answer');
+    let selectedButton = e.target;
+    let correctAnswer = questions[i].correct;
+    if(this.innerHTML === question.correct) {
+        selectedButton.classList.add('btn-correct');
+        console.log("Correct!")
     } else {
-        this.classList.add('btn-wrong');
-    } 
-    
+        selectedButton.classList.add('btn-wrong');
+    }
 }
 
 function incrementScore() {
@@ -85,32 +87,29 @@ function endGame() {
 let questions = [
     {
         question : "Which Disney princess has a pet tiger?",
-        answers : [
-            {text: 'Jasmine'},
-            {text: 'Moana'},
-            {text: 'Raya'},
-            {correct: 'Jasmine'},
-            {imgFile: src='assets/images/rajah.png'}
-        ] 
+        answer1: 'Jasmine',
+        answer2: 'Moana',
+        answer3: 'Raya',
+        correct: 'Jasmine',
+        img: 'rajah.png',
+        
     },
     {
-        question : "Which famous canine couple are owned by Roger and Anita?",
-        answers : [
-            {text: "Pongo and Perdi"},
-            {text: "Bernard and Bianca"},
-            {text: "Flotsam and Jetsam"},
-            {correct: "Pongo and Perdi"},
-            {imgFile: src='assets/images/rajah.png'}
-        ] 
+        question : "Which famous canine couple are owned by Roger and Anita?", 
+        answer1: "Pongo and Perdi",
+        answer2: "Bernard and Bianca",
+        answer3: "Flotsam and Jetsam",
+        correct: "Pongo and Perdi",
+        img: 'rajah.png',
+        
     },
     {
         question : "What are the names of Beast's trusty household helpers?",
-        answers : [
-            {text: "Chip and Dale"},
-            {text: "Cogsworth and Lumiere"},
-            {text: "Donald and Daffy"},
-            {correct: "Cogsworth and Lumiere"},
-            {imgFile: src='assets/images/rajah.png'}
-        ] 
+        answer1: "Chip and Dale",
+        answer2: "Cogsworth and Lumiere",
+        answer3: "Donald and Daffy",
+        correct: "Cogsworth and Lumiere",
+        img: 'rajah.png'
+        
     },
 ]
