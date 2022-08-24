@@ -9,6 +9,11 @@ let questionArea = document.getElementById("question-area");
 let score = document.getElementById("score");
 let questionElement = document.getElementById("question");
 let answerElements = document.getElementById("answer-area");
+let answerButtons = document.getElementsByClassName("answer-btn");
+let answerOne = document.getElementById("answer1");
+let answerTwo = document.getElementById("answer2");
+let answerThree = document.getElementById("answer3");
+let questionImg = document.getElementById("question-img");
 
 let shuffledQuestions
 let currentQuestionIndex
@@ -43,11 +48,18 @@ function shuffle() {
 
 function displayQuestion(question) {
     questionElement.innerText = question.question;
+    for (i of questions) {
+        answerOne.innerText = question.answers[0].text;
+        answerTwo.innerText = question.answers[1].text;
+        answerThree.innerText = question.answers[2].text;
+        console.log(answerOne);
+    }
+    
 }
     
 
 function checkAnswer() {
-    let answerButtons = document.getElementsByClassName("answer-btn");
+    
     for(let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].addEventListener('click', checkAnswer);
     }
@@ -69,9 +81,9 @@ let questions = [
     {
         question : "Which Disney princess has a pet tiger?",
         answers : [
-            {text: 'Jasmine'},
-            {text: 'Moana'},
-            {text: 'Raya'},
+            {a: 'Jasmine'},
+            {b: 'Moana'},
+            {c: 'Raya'},
             {correct: 'Jasmine'},
             {imgFile: 'rajah.png'}
         ] 
