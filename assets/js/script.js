@@ -7,8 +7,11 @@ let nextButton = document.getElementById("next-button");
 let introArea = document.getElementById("intro-area");
 let questionArea = document.getElementById("question-area");
 let score = document.getElementById("score");
+let questionElement = document.getElementById("question");
+let answerElements = document.getElementById("answer-area");
 
-let shuffledQuestions, currentQuestionIndex
+let shuffledQuestions
+let currentQuestionIndex
 
 startButton.addEventListener('click', runGame);
 
@@ -25,14 +28,21 @@ function runGame() {
     questionArea.classList.remove('hide');
     nextButton.classList.add('hide');
     score = 0;
-
-    displayQuestion();
+    shuffledQuestions = questions.sort(function () {
+        return Math.random() - 0.5;
+      });
+      console.log(shuffledQuestions);
+    currentQuestionIndex = 0
+    shuffle();
 }
 
-function displayQuestion() {
+function shuffle() {
+   displayQuestion(shuffledQuestions[currentQuestionIndex])
    
-   
+}
 
+function displayQuestion(question) {
+    questionElement.innerText = question.question;
 }
     
 

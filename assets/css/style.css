@@ -65,7 +65,7 @@ h4 {
 }
 
 
-.answer-area {
+#answer-area {
     display: grid;
     gap: 10px;
     max-width: 800px;
