@@ -19,7 +19,6 @@ let questionImg = document.getElementById("question-img");
 let shuffledQuestions
 let currentQuestionIndex
 let currentQuestion = {};
-let availableQuestions = [];
 
 startButton.addEventListener('click', runGame);
 
@@ -28,6 +27,20 @@ startButton.addEventListener('click', runGame);
  * The start quiz intro and start button are removed, 
  * and the display question function is called.
  */
+
+ rulesButton.addEventListener('click', rules);
+
+function rules() {
+    introArea.innerHTML = 
+    `<p>Rules</p>
+        <ol id=rules>
+            <li>There are 10 questions</li>
+            <li>Click one of three possible answers</li>
+            <li>You will earn one point for each correct answer</li>
+            <li>After each question, click next to continue</li>
+        </ol>`
+        rulesButton.classList.add('hide');
+}
 
 function runGame() {
     console.log("Started");
@@ -80,7 +93,6 @@ function checkAnswer() {
     nextButton.classList.remove('hide');
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].removeEventListener('click', checkAnswer);
-        // answerButtons[i].classList.remove('btn:hover');
     }
 
 }
