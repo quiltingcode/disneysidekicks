@@ -18,6 +18,7 @@ let answerThree = document.getElementById("answer3");
 let questionImg = document.getElementById("question-img");
 let shuffledQuestions
 let currentQuestionIndex
+
 let currentQuestion = {};
 
 startButton.addEventListener('click', runGame);
@@ -70,6 +71,7 @@ function displayQuestion(currentQuestion) {
         answerOne.innerText = currentQuestion.answer1;
         answerTwo.innerText = currentQuestion.answer2;
         answerThree.innerText = currentQuestion.answer3;
+        
     }
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].addEventListener('click', checkAnswer);
@@ -78,8 +80,9 @@ function displayQuestion(currentQuestion) {
 
 function checkAnswer() {
     console.log('Checking answer');
+    console.log(questions[0].correct);
     for (let i = 0; i < answerButtons.length; i++){
-        if(this.innerHTML === currentQuestion.correct) {
+        if(this.innerHTML === questions[0].correct) {
             this.classList.add('btn-correct');  
             console.log("Correct!");
             incrementScore();
@@ -100,20 +103,19 @@ function checkAnswer() {
 nextButton.addEventListener('click', nextQuestion);
 
 function nextQuestion() {  
-    currentQuestionIndex++;
+    currentQuestion++;
     questionNumber++;
-    displayQuestion;
+    displayQuestion();
 }
 
 function incrementScore() {
-
+    score++;
 }
 
 
 function endGame() {
 
 }
-
 
 //List of Quiz questions
 
@@ -124,7 +126,7 @@ let questions = [
         answer2: 'Moana',
         answer3: 'Raya',
         correct: 'Jasmine',
-        img: 'rajah.png',
+        img: src="assets/images/rajah.png",
         
     },
     {
