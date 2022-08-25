@@ -3,6 +3,7 @@
 
 
 let startButton = document.getElementById("start-button"); 
+let rulesButton = document.getElementById("rules-button"); 
 let nextButton = document.getElementById("next-button");
 let introArea = document.getElementById("intro-area");
 let questionArea = document.getElementById("question-area");
@@ -15,9 +16,10 @@ let answerOne = document.getElementById("answer1");
 let answerTwo = document.getElementById("answer2");
 let answerThree = document.getElementById("answer3");
 let questionImg = document.getElementById("question-img");
-
 let shuffledQuestions
 let currentQuestionIndex
+let currentQuestion = {};
+let availableQuestions = [];
 
 startButton.addEventListener('click', runGame);
 
@@ -30,6 +32,7 @@ startButton.addEventListener('click', runGame);
 function runGame() {
     console.log("Started");
     startButton.classList.add('hide');
+    rulesButton.classList.add('hide');
     introArea.classList.add('hide');
     questionArea.classList.remove('hide');
     nextButton.classList.add('hide');
@@ -37,7 +40,8 @@ function runGame() {
     shuffledQuestions = questions.sort(function () {
         return Math.random() - 0.5;
       });
-    currentQuestionIndex = 0
+    currentQuestionIndex = 0;
+    questionNumber = 1;
     shuffle();
 }
 
@@ -47,29 +51,46 @@ function shuffle() {
    
 }
 
-function displayQuestion(question) {
-    questionElement.innerText = question.question;
+function displayQuestion(currentQuestion) {
+    questionElement.innerText = currentQuestion.question;
     for (i of questions) {
-        answerOne.innerText = question.answer1;
-        answerTwo.innerText = question.answer2;
-        answerThree.innerText = question.answer3;
-        // questionImg = question.answers[5].img;
+        answerOne.innerText = currentQuestion.answer1;
+        answerTwo.innerText = currentQuestion.answer2;
+        answerThree.innerText = currentQuestion.answer3;
     }
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].addEventListener('click', checkAnswer);
     }
 }
-    
-function checkAnswer(e, question) {
+
+function checkAnswer() {
     console.log('Checking answer');
-    let selectedButton = e.target;
-    let correctAnswer = questions[i].correct;
-    if(this.innerHTML === question.correct) {
-        selectedButton.classList.add('btn-correct');
-        console.log("Correct!")
-    } else {
-        selectedButton.classList.add('btn-wrong');
+    for (let i = 0; i < answerButtons.length; i++){
+        if(this.innerHTML === currentQuestion.correct) {
+            this.classList.add('btn-correct');  
+            console.log("Correct!");
+            incrementScore();
+        } else {
+            this.classList.add('btn-wrong');
+            console.log("Wrong!")
+            console.log(this.innerHTML);
+            console.log(currentQuestion.correct);
+        }
     }
+    nextButton.classList.remove('hide');
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].removeEventListener('click', checkAnswer);
+        // answerButtons[i].classList.remove('btn:hover');
+    }
+
+}
+
+nextButton.addEventListener('click', nextQuestion);
+
+function nextQuestion() {  
+    currentQuestionIndex++;
+    questionNumber++;
+    displayQuestion;
 }
 
 function incrementScore() {
