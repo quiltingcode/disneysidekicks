@@ -7,7 +7,6 @@ let rulesButton = document.getElementById("rules-button");
 let nextButton = document.getElementById("next-button");
 let introArea = document.getElementById("intro-area");
 let questionArea = document.getElementById("question-area");
-let score = document.getElementById("score");
 let questionElement = document.getElementById("question");
 let questionNumber = document.getElementById("question-number");
 let answerElements = document.getElementById("answer-area");
@@ -18,7 +17,6 @@ let answerThree = document.getElementById("answer3");
 let questionImg = document.getElementById("question-img");
 let shuffledQuestions
 let currentQuestionIndex
-
 let currentQuestion = {};
 
 startButton.addEventListener('click', runGame);
@@ -36,7 +34,7 @@ function rules() {
     `<p>Rules</p>
         <ol id=rules>
             <li>There are 10 questions</li>
-            <li>Click one of three possible answers</li>
+            <li>Click to select one of three possible answers</li>
             <li>You will earn one point for each correct answer</li>
             <li>After each question, click next to continue</li>
         </ol>`
@@ -103,13 +101,24 @@ function checkAnswer() {
 nextButton.addEventListener('click', nextQuestion);
 
 function nextQuestion() {  
-    currentQuestion++;
-    questionNumber++;
-    displayQuestion();
+    console.log("Generating next question...");
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].classList.remove('btn-correct');
+        answerButtons[i].classList.remove('btn-wrong');
+    }
+    shuffle();
+    runGame();
+    
 }
 
+/**
+ * Gets the current score from the DOM and increments it by 1
+ */
+
 function incrementScore() {
-    score++;
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore;
+    
 }
 
 
