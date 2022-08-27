@@ -55,7 +55,7 @@ h4 {
 
 }
 
-.start-btn, .next-btn, .home-btn, .rules-btn {
+.start-btn, .next-btn, .home-btn, .rules-btn, .btn {
     font-family: 'Amatic SC', cursive, sans-serif;
     color: black;
     font-size: larger;

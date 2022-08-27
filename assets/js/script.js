@@ -5,8 +5,10 @@
 let startButton = document.getElementById("start-button"); 
 let rulesButton = document.getElementById("rules-button"); 
 let nextButton = document.getElementById("next-button");
+let playAgainButton = document.getElementById("play-again-btn");
 let introArea = document.getElementById("intro-area");
 let questionArea = document.getElementById("question-area");
+let endOfGameArea = document.getElementById("end-of-game");
 let questionTitle = document.getElementById("question-title");
 let questionNumber = document.getElementById("question-number");
 let questionElement = document.getElementById("question");
@@ -17,11 +19,13 @@ let answerTwo = document.getElementById("answer2");
 let answerThree = document.getElementById("answer3");
 let questionImg = document.getElementById("question-img");
 let shuffledQuestions
-let currentQuestionIndex
+let currentQuestionIndex = [];
 let currentQuestion = {};
 let scoreText = document.getElementById("score");
 let score = 0;
 let questionCounter = 0;
+let finalScore = document.getElementById("final-score")
+let correctAnswerCounter = 0
 
 const scorePoints = 10;
 const maxQuestion = 12;
@@ -55,17 +59,16 @@ function runGame() {
     introArea.classList.add('hide');
     questionArea.classList.remove('hide');
     nextButton.classList.add('hide');
-    score = 0;
-    shuffledQuestions = questions.sort(function () {
-        return Math.random() - 0.5;
-      });
-    currentQuestionIndex = 0;
+    currentQuestionIndex = [0];
     questionCounter++;
     questionTitle.innerText = `Question ${questionCounter} of ${maxQuestion}`;
     shuffle();
 }
 
 function shuffle() {
+    shuffledQuestions = questions.sort(function () {
+        return Math.random() - 0.5;
+      });
    displayQuestion(shuffledQuestions[currentQuestionIndex])
    console.log("Shuffled");
    
@@ -99,11 +102,15 @@ function checkAnswer() {
             console.log(currentQuestion.correct);
         }
     }
+
     nextButton.classList.remove('hide');
+    if (questionCounter === 5) {
+        nextButton.innerText = "End";
+        endGame();
+    }
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].removeEventListener('click', checkAnswer);
     }
-
 }
 
 nextButton.addEventListener('click', nextQuestion);
@@ -114,9 +121,8 @@ function nextQuestion() {
         answerButtons[i].classList.remove('btn-correct');
         answerButtons[i].classList.remove('btn-wrong');
     }
-    shuffle();
+    questions.splice(0, 1);
     runGame();
-    
 }
 
 /**
@@ -126,15 +132,31 @@ function nextQuestion() {
 function incrementScore(num) {
     score += num;
     scoreText.innerText = score;
+    console.log("Adding points");
+    correctAnswerCounter++;
+    console.log("Total score is " + correctAnswerCounter);
     // let oldScore = parseInt(document.getElementById("score").innerText);
     // document.getElementById("score").innerText = ++oldScore;
     
 }
 
-
 function endGame() {
+    console.log("Calculating total score...")
+    questionArea.classList.add('hide');
+    endOfGameArea.classList.remove('hide');
+    finalScore.innerText = `${correctAnswerCounter}`
 
 }
+
+playAgainButton.addEventListener('click', resetGame);
+
+function resetGame() { 
+    console.log("Resetting game features");
+    score = 0
+    runGame();
+
+}
+
 
 //List of Quiz questions
 
