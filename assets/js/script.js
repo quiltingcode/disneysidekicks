@@ -7,8 +7,9 @@ let rulesButton = document.getElementById("rules-button");
 let nextButton = document.getElementById("next-button");
 let introArea = document.getElementById("intro-area");
 let questionArea = document.getElementById("question-area");
-let questionElement = document.getElementById("question");
+let questionTitle = document.getElementById("question-title");
 let questionNumber = document.getElementById("question-number");
+let questionElement = document.getElementById("question");
 let answerElements = document.getElementById("answer-area");
 let answerButtons = document.getElementsByClassName("answer-btn");
 let answerOne = document.getElementById("answer1");
@@ -18,6 +19,12 @@ let questionImg = document.getElementById("question-img");
 let shuffledQuestions
 let currentQuestionIndex
 let currentQuestion = {};
+let scoreText = document.getElementById("score");
+let score = 0;
+let questionCounter = 0;
+
+const scorePoints = 10;
+const maxQuestion = 12;
 
 startButton.addEventListener('click', runGame);
 
@@ -53,7 +60,8 @@ function runGame() {
         return Math.random() - 0.5;
       });
     currentQuestionIndex = 0;
-    questionNumber = 1;
+    questionCounter++;
+    questionTitle.innerText = `Question ${questionCounter} of ${maxQuestion}`;
     shuffle();
 }
 
@@ -83,7 +91,7 @@ function checkAnswer() {
         if(this.innerHTML === questions[0].correct) {
             this.classList.add('btn-correct');  
             console.log("Correct!");
-            incrementScore();
+            incrementScore(scorePoints);
         } else {
             this.classList.add('btn-wrong');
             console.log("Wrong!")
@@ -115,9 +123,11 @@ function nextQuestion() {
  * Gets the current score from the DOM and increments it by 1
  */
 
-function incrementScore() {
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++oldScore;
+function incrementScore(num) {
+    score += num;
+    scoreText.innerText = score;
+    // let oldScore = parseInt(document.getElementById("score").innerText);
+    // document.getElementById("score").innerText = ++oldScore;
     
 }
 
