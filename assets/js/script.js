@@ -18,11 +18,11 @@ let answerOne = document.getElementById("answer1");
 let answerTwo = document.getElementById("answer2");
 let answerThree = document.getElementById("answer3");
 let questionImg = document.getElementById("question-img");
-let shuffledQuestions
+let shuffledQuestions = [];
 let currentQuestionIndex = [];
 let currentQuestion = {};
+let score = 0
 let scoreText = document.getElementById("score");
-let score = 0;
 let questionCounter = 0;
 let finalScore = document.getElementById("final-score")
 let correctAnswerCounter = 0
@@ -113,6 +113,20 @@ function checkAnswer() {
     }
 }
 
+/**
+ * Gets the current score from the DOM and increments it by 1
+ */
+ 
+ function incrementScore() {
+    score++
+    scoreText.innerText = score;
+    // scoreText.innerText = `${correctAnswerCounter - 2}`;
+    console.log("Adding points");
+    correctAnswerCounter++;
+    console.log("Total score is " + correctAnswerCounter);
+    
+}
+
 nextButton.addEventListener('click', nextQuestion);
 
 function nextQuestion() {  
@@ -125,20 +139,7 @@ function nextQuestion() {
     runGame();
 }
 
-/**
- * Gets the current score from the DOM and increments it by 1
- */
 
-function incrementScore(num) {
-    score += num;
-    scoreText.innerText = score;
-    console.log("Adding points");
-    correctAnswerCounter++;
-    console.log("Total score is " + correctAnswerCounter);
-    // let oldScore = parseInt(document.getElementById("score").innerText);
-    // document.getElementById("score").innerText = ++oldScore;
-    
-}
 
 function endGame() {
     console.log("Calculating total score...")
@@ -152,11 +153,18 @@ playAgainButton.addEventListener('click', resetGame);
 
 function resetGame() { 
     console.log("Resetting game features");
-    score = 0
+    score = ((correctAnswerCounter * scorePoints) - (correctAnswerCounter * scorePoints) );
+    endOfGameArea.classList.add('hide');
+    questionCounter = (maxQuestion - 12);
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].classList.remove('btn-correct');
+        answerButtons[i].classList.remove('btn-wrong');
+    }
+    nextButton.innerText = "Next";
+    scoreText.innerText = `${correctAnswerCounter - correctAnswerCounter}`;
     runGame();
 
 }
-
 
 //List of Quiz questions
 
