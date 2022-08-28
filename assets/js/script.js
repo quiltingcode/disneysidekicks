@@ -276,7 +276,7 @@ let questions = [
         img: "sven.png"   
     },
     {
-        question : "Who is Jafar's evil scheming sidekick?",
+        question : "Who is Jafar's scheming sidekick?",
         answer1: "Tiago",
         answer2: "Abu",
         answer3: "Iago",
@@ -316,7 +316,7 @@ let questions = [
         img: "mowgli.png"   
     },
     {
-        question : "Who is Tiana's marriage-obsessed childhood friend?",
+        question : "Who is Tiana's childhood friend?",
         answer1: "Sarah",
         answer2: "Lindsay",
         answer3: "Charlotte",
@@ -338,5 +338,77 @@ let questions = [
         answer3: "Mushu",
         correct: "Khan",
         img: "mushu.png"   
+    },
+    {
+        question : "What type of animal is Mulan's guardian, Mushu?",
+        answer1: "A dragon",
+        answer2: "A lizard",
+        answer3: "A cricket",
+        correct: "A dragon",
+        img: "mulan.png"   
+    },
+    {
+        question : "What is Olaf's favourite season?",
+        answer1: "Spring",
+        answer2: "Summer",
+        answer3: "Winter",
+        correct: "Summer",
+        img: "olaf.png"   
+    },
+    {
+        question : "Who encourages Dumbo to learn to fly?",
+        answer1: "His mother",
+        answer2: "Timothy Mouse",
+        answer3: "The crows",
+        correct: "Timothy Mouse",
+        img: "dumbo.png"   
+    },
+    {
+        question : "Who are Cinderella's only friends?",
+        answer1: "The mice",
+        answer2: "The cats",
+        answer3: "The step-sisters",
+        correct: "The mice",
+        img: "cinderella.png"   
+    },
+    {
+        question : "What is the name of Maleficent's shape-shifting sidekick?",
+        answer1: "Fauna",
+        answer2: "Ravel",
+        answer3: "Diaval",
+        correct: "Diaval",
+        img: "maleficent.png"   
+    },
+    {
+        question : "What are Quasimodo's friends, Victor, Hugo and Laverne?",
+        answer1: "Statues",
+        answer2: "Pigeons",
+        answer3: "Bats",
+        correct: "Statues",
+        img: "quasimodo.png"   
+    },
+    {
+        question : "What are the names of Cruella De Vil's useless henchmen?",
+        answer1: "Bill and Johnny",
+        answer2: "Jake and Harry",
+        answer3: "Horace and Jasper",
+        correct: "Horace and Jasper",
+        img: "cruella.png"   
+    },
+    {
+        question : "What is the name of the wise old owl in 'Sword In The Stone'?",
+        answer1: "Archimedes",
+        answer2: "Socrates",
+        answer3: "Aristotle",
+        correct: "Archimedes",
+        img: "archimedes.png"   
+    },
+    {
+        question : "Who is Pooh's kind, sweet, yet nervous best friend?",
+        answer1: "Tigger",
+        answer2: "Piglet",
+        answer3: "Rabbit",
+        correct: "Piglet",
+        img: "pooh.png"   
     },
 ]
