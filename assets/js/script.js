@@ -42,7 +42,7 @@ startButton.addEventListener('click', runGame);
 
 function rules() {
     introArea.innerHTML = 
-    `<p>Rules</p>
+    `<h3>Rules</h3>
         <ol id=rules>
             <li>There are 10 questions</li>
             <li>Click to select one of three possible answers</li>

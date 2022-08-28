@@ -30,7 +30,7 @@ body {
     
 }
 
-h3 {
+#question-area h3 {
     text-decoration: underline;
 }
 
@@ -113,4 +113,26 @@ h4 {
 
 .btn-wrong {
     background-color: red;
+}
+
+/* for medium tablet screen size from 800px wide and up */
+@media screen and (min-width: 800px) {
+
+    body {
+        font-size: 1.9rem;
+    }
+
+    #intro-area {
+        max-width: 500px;
+        margin: auto;
+        text-align: center;
+        
+    }
+
+    .answer-btn {
+        font-size: 1.7rem;
+        max-width: 900px;
+
+    }
+
 }
