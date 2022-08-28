@@ -80,6 +80,7 @@ function displayQuestion(currentQuestion) {
         answerOne.innerText = currentQuestion.answer1;
         answerTwo.innerText = currentQuestion.answer2;
         answerThree.innerText = currentQuestion.answer3;
+        questionImg.setAttribute('src', "assets/images/" + currentQuestion.img);
         
     }
     for (let i = 0; i < answerButtons.length; i++) {
@@ -120,7 +121,6 @@ function checkAnswer() {
  function incrementScore() {
     score++
     scoreText.innerText = score;
-    // scoreText.innerText = `${correctAnswerCounter - 2}`;
     console.log("Adding points");
     correctAnswerCounter++;
     console.log("Total score is " + correctAnswerCounter);
@@ -175,7 +175,7 @@ let questions = [
         answer2: 'Moana',
         answer3: 'Raya',
         correct: 'Jasmine',
-        img: src="assets/images/rajah.png",
+        img: "rajah.png"
         
     },
     {
@@ -184,7 +184,7 @@ let questions = [
         answer2: "Bernard and Bianca",
         answer3: "Flotsam and Jetsam",
         correct: "Pongo and Perdi",
-        img: 'rajah.png',
+        img: "rajah.png"
         
     },
     {
@@ -193,7 +193,7 @@ let questions = [
         answer2: "Cogsworth and Lumiere",
         answer3: "Donald and Daffy",
         correct: "Cogsworth and Lumiere",
-        img: 'rajah.png'
+        img: "rajah.png"
         
     },
     {
@@ -202,7 +202,7 @@ let questions = [
         answer2: "A dragon",
         answer3: "An armadillo",
         correct: "An armadillo",
-        img: 'rajah.png'
+        img: "rajah.png"
         
     },
     {
@@ -211,7 +211,7 @@ let questions = [
         answer2: "Scuttle",
         answer3: "Flounder",
         correct: "Flounder",
-        img: 'rajah.png'
+        img: "rajah.png"
         
     },
     {
@@ -220,7 +220,7 @@ let questions = [
         answer2: "Sole",
         answer3: "Haddock",
         correct: "Dory",
-        img: 'rajah.png'
+        img: "rajah.png"
         
     },
     {
@@ -229,7 +229,7 @@ let questions = [
         answer2: "Ho ho",
         answer3: "Ha ha",
         correct: "Hei hei",
-        img: 'rajah.png'
+        img: "rajah.png"
         
     },
     {
@@ -238,7 +238,7 @@ let questions = [
         answer2: "A snowman",
         answer3: "A fire spirit",
         correct: "A snowman",
-        img: 'rajah.png'
+        img: "rajah.png"
         
     },
     {
@@ -247,7 +247,7 @@ let questions = [
         answer2: "Cinderella",
         answer3: "Aurora",
         correct: "Snow White",
-        img: 'rajah.png'
+        img: "rajah.png"
         
     },
     {
@@ -256,7 +256,7 @@ let questions = [
         answer2: "Timon and Pumbaa",
         answer3: "Zazu and Rafiki",
         correct: "Timon and Pumbaa",
-        img: 'rajah.png'
+        img: "rajah.png"
         
     },
     {
@@ -265,7 +265,7 @@ let questions = [
         answer2: "Flying",
         answer3: "Stealing",
         correct: "Stealing",
-        img: 'rajah.png'
+        img: "rajah.png"
         
     },
     {
@@ -274,7 +274,7 @@ let questions = [
         answer2: "Flying",
         answer3: "Stealing",
         correct: "Stealing",
-        img: 'rajah.png'
+        img: "rajah.png"
         
     },
 ]
