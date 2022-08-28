@@ -107,7 +107,7 @@ function checkAnswer() {
     }
 
     nextButton.classList.remove('hide');
-    if (questionCounter === 5) {
+    if (questionCounter === 12) {
         nextButton.innerText = "End";
         endGame();
     }
@@ -177,8 +177,7 @@ let questions = [
         answer2: 'Moana',
         answer3: 'Raya',
         correct: 'Jasmine',
-        img: "rajah.png"
-        
+        img: "rajah.png"  
     },
     {
         question : "Which famous canine couple are owned by Roger and Anita?", 
@@ -186,8 +185,7 @@ let questions = [
         answer2: "Bernard and Bianca",
         answer3: "Flotsam and Jetsam",
         correct: "Pongo and Perdi",
-        img: "pongo-perdi.png"
-        
+        img: "pongo-perdi.png" 
     },
     {
         question : "What are the names of Beast's trusty household helpers?",
@@ -195,8 +193,7 @@ let questions = [
         answer2: "Cogsworth and Lumiere",
         answer3: "Donald and Daffy",
         correct: "Cogsworth and Lumiere",
-        img: "cogsworth-lumiere.png"
-        
+        img: "cogsworth-lumiere.png" 
     },
     {
         question : "What type of animal is Raya's pet, Tuk Tuk?",
@@ -204,8 +201,7 @@ let questions = [
         answer2: "A dragon",
         answer3: "An armadillo",
         correct: "An armadillo",
-        img: "raya.png"
-        
+        img: "raya.png"  
     },
     {
         question : "What is the name of Ariel's pet angelfish?",
@@ -213,8 +209,7 @@ let questions = [
         answer2: "Scuttle",
         answer3: "Flounder",
         correct: "Flounder",
-        img: "flounder.png"
-        
+        img: "flounder.png" 
     },
     {
         question : "Who becomes Marlin's unlikely friend and sidekick whilst in search of his son?",
@@ -222,8 +217,7 @@ let questions = [
         answer2: "Sole",
         answer3: "Haddock",
         correct: "Dory",
-        img: "nemo.png"
-        
+        img: "nemo.png"  
     },
     {
         question : "What is the name of Moana's brainless chicken?",
@@ -231,8 +225,7 @@ let questions = [
         answer2: "Ho ho",
         answer3: "Ha ha",
         correct: "Hei hei",
-        img: "chicken.png"
-        
+        img: "chicken.png"  
     },
     {
         question : "What magical sidekick does Elsa accidentally create as a child?",
@@ -240,8 +233,7 @@ let questions = [
         answer2: "A snowman",
         answer3: "A fire spirit",
         correct: "A snowman",
-        img: "elsa.png"
-        
+        img: "elsa.png"   
     },
     {
         question : "Which princess end up with seven trusty sidekicks whilst hiding in the forest?",
@@ -249,8 +241,7 @@ let questions = [
         answer2: "Cinderella",
         answer3: "Aurora",
         correct: "Snow White",
-        img: "dwarfs.png"
-        
+        img: "dwarfs.png"   
     },
     {
         question : "Who takes care of Simba after he runs away from the Pridelands?",
@@ -258,8 +249,7 @@ let questions = [
         answer2: "Timon and Pumbaa",
         answer3: "Zazu and Rafiki",
         correct: "Timon and Pumbaa",
-        img: "simba.png"
-        
+        img: "simba.png"   
     },
     {
         question : "What is the special talent of Aladdin's pet monkey?",
@@ -267,8 +257,7 @@ let questions = [
         answer2: "Flying",
         answer3: "Stealing",
         correct: "Stealing",
-        img: "abu.png"
-        
+        img: "abu.png"   
     },
     {
         question : "Who is Lilo's other worldly companion?",
@@ -276,7 +265,78 @@ let questions = [
         answer2: "Mitch",
         answer3: "Rich",
         correct: "Stitch",
-        img: "lilo.png"
-        
+        img: "lilo.png"   
+    },
+    {
+        question : "Who is Kristoff's ice business partner?",
+        answer1: "Sven",
+        answer2: "Sergio",
+        answer3: "Olaf",
+        correct: "Sven",
+        img: "sven.png"   
+    },
+    {
+        question : "Who is Jafar's evil scheming sidekick?",
+        answer1: "Tiago",
+        answer2: "Abu",
+        answer3: "Iago",
+        correct: "Iago",
+        img: "iago.png"   
+    },
+    {
+        question : "What type of animal are Ursula's pets?",
+        answer1: "Octopus",
+        answer2: "Eel",
+        answer3: "Shark",
+        correct: "Eel",
+        img: "ursula.png"   
+    },
+    {
+        question : "Who is King Mufasa's royal advisor?",
+        answer1: "Sarabi",
+        answer2: "Rafiki",
+        answer3: "Zazu",
+        correct: "Zazu",
+        img: "mufasa.png"   
+    },
+    {
+        question : "What animal is Pocahontas' buddy, Meeko?",
+        answer1: "A badger",
+        answer2: "A fox",
+        answer3: "A racoon",
+        correct: "A racoon",
+        img: "pocohontas.png"   
+    },
+    {
+        question : "Who agrees to accompany Mowgli on his journey to the man village?",
+        answer1: "Baloo",
+        answer2: "Bagheera",
+        answer3: "Shere Khan",
+        correct: "Bagheera",
+        img: "mowgli.png"   
+    },
+    {
+        question : "Who is Tiana's marriage-obsessed childhood friend?",
+        answer1: "Sarah",
+        answer2: "Lindsay",
+        answer3: "Charlotte",
+        correct: "Charlotte",
+        img: "tiana.png"   
+    },
+    {
+        question : "What is the name of Rapunzel's pet chameleon?",
+        answer1: "Newton",
+        answer2: "Pascal",
+        answer3: "Fleming",
+        correct: "Pascal",
+        img: "pascal.png"   
+    },
+    {
+        question : "What is the name of Mulan's horse?",
+        answer1: "Khan",
+        answer2: "Little Brother",
+        answer3: "Mushu",
+        correct: "Khan",
+        img: "mushu.png"   
     },
 ]
