@@ -17,6 +17,7 @@ let answerButtons = document.getElementsByClassName("answer-btn");
 let answerOne = document.getElementById("answer1");
 let answerTwo = document.getElementById("answer2");
 let answerThree = document.getElementById("answer3");
+let logoImg = document.getElementById("logo-img");
 let questionImg = document.getElementById("question-img");
 let shuffledQuestions = [];
 let currentQuestionIndex = [];
@@ -59,6 +60,7 @@ function runGame() {
     introArea.classList.add('hide');
     questionArea.classList.remove('hide');
     nextButton.classList.add('hide');
+    logoImg.classList.add('hide');
     currentQuestionIndex = [0];
     questionCounter++;
     questionTitle.innerText = `Question ${questionCounter} of ${maxQuestion}`;
@@ -184,7 +186,7 @@ let questions = [
         answer2: "Bernard and Bianca",
         answer3: "Flotsam and Jetsam",
         correct: "Pongo and Perdi",
-        img: "rajah.png"
+        img: "pongo-perdi.png"
         
     },
     {
@@ -193,7 +195,7 @@ let questions = [
         answer2: "Cogsworth and Lumiere",
         answer3: "Donald and Daffy",
         correct: "Cogsworth and Lumiere",
-        img: "rajah.png"
+        img: "cogsworth-lumiere.png"
         
     },
     {
@@ -202,7 +204,7 @@ let questions = [
         answer2: "A dragon",
         answer3: "An armadillo",
         correct: "An armadillo",
-        img: "rajah.png"
+        img: "raya.png"
         
     },
     {
@@ -211,7 +213,7 @@ let questions = [
         answer2: "Scuttle",
         answer3: "Flounder",
         correct: "Flounder",
-        img: "rajah.png"
+        img: "flounder.png"
         
     },
     {
@@ -220,7 +222,7 @@ let questions = [
         answer2: "Sole",
         answer3: "Haddock",
         correct: "Dory",
-        img: "rajah.png"
+        img: "nemo.png"
         
     },
     {
@@ -229,7 +231,7 @@ let questions = [
         answer2: "Ho ho",
         answer3: "Ha ha",
         correct: "Hei hei",
-        img: "rajah.png"
+        img: "chicken.png"
         
     },
     {
@@ -238,7 +240,7 @@ let questions = [
         answer2: "A snowman",
         answer3: "A fire spirit",
         correct: "A snowman",
-        img: "rajah.png"
+        img: "elsa.png"
         
     },
     {
@@ -247,7 +249,7 @@ let questions = [
         answer2: "Cinderella",
         answer3: "Aurora",
         correct: "Snow White",
-        img: "rajah.png"
+        img: "dwarfs.png"
         
     },
     {
@@ -256,7 +258,7 @@ let questions = [
         answer2: "Timon and Pumbaa",
         answer3: "Zazu and Rafiki",
         correct: "Timon and Pumbaa",
-        img: "rajah.png"
+        img: "simba.png"
         
     },
     {
@@ -265,16 +267,16 @@ let questions = [
         answer2: "Flying",
         answer3: "Stealing",
         correct: "Stealing",
-        img: "rajah.png"
+        img: "abu.png"
         
     },
     {
-        question : "What is the special talent of Aladdin's pet monkey?",
-        answer1: "Dancing",
-        answer2: "Flying",
-        answer3: "Stealing",
-        correct: "Stealing",
-        img: "rajah.png"
+        question : "Who is Lilo's other worldly companion?",
+        answer1: "Stitch",
+        answer2: "Mitch",
+        answer3: "Rich",
+        correct: "Stitch",
+        img: "lilo.png"
         
     },
 ]
