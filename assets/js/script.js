@@ -101,8 +101,7 @@ function checkAnswer() {
         } else {
             this.classList.add('btn-wrong');
             console.log("Wrong!")
-            console.log(this.innerHTML);
-            console.log(currentQuestion.correct);
+
         }
     }
 
@@ -163,6 +162,7 @@ function resetGame() {
         answerButtons[i].classList.remove('btn-wrong');
     }
     nextButton.innerText = "Next";
+    correctAnswerCounter = 0;
     scoreText.innerText = `${correctAnswerCounter - correctAnswerCounter}`;
     runGame();
 
