@@ -1,108 +1,293 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **_Disney Sidekicks_**
 
-Welcome Kelly Hutchison,
+Disney Sidekicks is an interactive quiz website where users can test their Disney knowledge to the max. This is not just the usual quiz about the Disney main characters, but focuses solely on pets and sidekicks who have a supporting role and often get forgotten.  However, in many cases, these characters have an important role to play in the story and often have the best scripts and comic moments of all.  For example In 1992's Aladdin, who could have imagined such strength of character from of a rug, which couldn't even talk! This is the magic of Disney. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Welcome to <a href="https://quiltingcode.github.io/disneysidekicks/" target="_blank" rel="noopener">Disney Sidekicks</a>
 
-## Gitpod Reminders
+![Disney Sidekicks responsive design](assets/readmeimages/mockup.PNG)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Contents
 
-`python3 -m http.server`
+* [**User Experience UX**](<#user-experience-ux>)
+    * [Wireframes](<#wireframes>)
+    * [Site Structure](<#site-structure>)
+    * [Design Choices](<#design-choices>)
+    *  [Typography](<#typography>)
+    *  [Colour Scheme](<#colour-scheme>)
+* [**Current Features**](<#current-features>)
+    * [**Navigation menu**](<#navigation-menu>)
+    * [**Welcome Section**](<#welcome-section>)
+    * [**Map**](<#map>)
+    * [**Footer**](<#footer>)
+    * [**Places**](<#places>)
+    * [**Food**](<#food>)
+    * [**Events**](<#events>)
+    * [**Sign up Page**](<#sign-up-page>)
+* [**Future Features**](<#future-features>)
+* [**Technologies Used**](<#technologies-used>)
+* [**Testing**](<#testing>)
+* [**Deployment**](<#deployment>)
+* [**Credits**](<#credits>)
+    * [**Content**](<#content>)
+    * [**Media**](<#media>)
+*  [**Acknowledgements**](<#acknowledgements>)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+# User Experience (UX)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Wireframes
 
-A blue button should appear to click: _Make Public_,
+The wireframes for the Love Andalucia project were produced in Balsamiq.  There are frames for a desktop device and for a mobile device.  
 
-Another blue button should appear to click: _Open Browser_.
+## Desktop Device Wireframes 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![Homepage wireframe image](assets/readmeimages/homepagebalsamiq.PNG)
+![Places Page wireframe image](assets/readmeimages/placespagebalsamiq.PNG)
+![Food Page wireframe image](assets/readmeimages/foodpagebalsamiq.PNG)
+![Events Page wireframe image](assets/readmeimages/eventspagebalsamiq.PNG)
 
-To log into the Heroku toolbelt CLI:
+## Mobile Device Wireframes
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Homepage Mobile wireframe image](assets/readmeimages/homepagemobilebalsamiq.PNG) 
+![Places Page Mobile wireframe image](assets/readmeimages/placesmobilebalsamiq.PNG) 
+![Food Page Mobile wireframe image](assets/readmeimages/foodmobilebalsamiq.PNG) 
+![Events Page Mobile wireframe image](assets/readmeimages/eventsmobilebalsamiq.PNG) 
+![Signup Page Mobile wireframe image](assets/readmeimages/formmobilebalsamiq.PNG) 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+I initially only designed the site on desktop size wireframes, and the intention was to put the events and signup information all together in one page. For this reason, there are only 4 desktop size wireframes. However, once I started to build the site, it made more sense to focus the page solely with events information in a table and then put a link to a separate sign-up page with a form. 
+Later during the build, I created the wireframes for the mobile device. Here you can see the events page and form signup page separately. 
+In the second and third pages for desktop, I wanted to include a photo with each of the three categories and therefore I changed the layout in the end to show each category under each other with a photo next to it. 
 
-------
 
-## Release History
+[Back to top](<#contents>)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Site Structure
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Love Andalucia has five pages.  The home page is the default loading page, and then there is a navigation bar to access the places, food, and events pages. From the events page, you can click the sign-up button to access the form page. From any of the pages you can also click on the Love Andalucia header to return the home page. 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+[Back to top](<#contents>)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Design Choices
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+ * ### Typography
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The fonts I chose were ‘Nothing you could do’ for the h1 and h2 headings and ‘Itim’ for the body.  If these fonts are not available, they revert to cursive and sans-serif.  I chose the ‘Nothing you could do’ header primarily as I envisaged an Italic style calligraphy font, but then I wanted something more legible for the main text, so I found ‘Itim’ gave a nice contrast whilst maintaining something easier on the eye for larger areas of text. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+ * ### Colour Scheme
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+The colour scheme I chose was initially based on the idea of a Mediterranean blue colour, similar to the blue roofs painted in traditional old-style Greek and Spanish towns. From there, I used the sessions.edu colour combination website to find a set of complimentary tones to give the whole website a bright, fresh, Mediterranean look and feel. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Colour Palate image](assets/readmeimages/typography.PNG)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+[Back to top](<#contents>)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# Current Features
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+  
+## Navigation Menu
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+At the top of the website, on all pages, is the main title of the website and the navigation bar underneath. This makes it easy to navigate back to the homepage or to the three other pages of the website easily from any page. The nav bar introduces the colour palette to the user and indicates which page you are currently browsing, by underlining the current page.
+The title header can also be clicked on as a navigation tool back to the home page.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![Navigation bar image](assets/readmeimages/nav.PNG)
 
-------
+[Back to top](<#contents>)
 
-## FAQ about the uptime script
+## welcome Section
 
-**Why have you added this script?**
+On the home page, I have written a brief introduction to the Andalucia region and included an inviting photo to encourage the user to read on. 
+Then the user is posed the question; Why come to Andalucia? This gives the user the option to focus their search into one of three categories. These three buttons use all three tones from web design colour palette. 
+1.	Places – which takes them to the same place as the ‘Places to Go’ navigation bar option. This page describes places in Andalucia in more detail.
+2.	Food – which takes them to the same place as the ‘Places to Eat’ navigation bar option. This page describes the Andalucian cuisine in more detail. 
+3.	Events – which takes them to the same place as the ‘Events’ navigation bar option, and displays a list of the most famous Andalucian events. 
+ 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![Welcome Section Image](assets/readmeimages/welcome.PNG)
 
-**How will this affect me?**
+[Back to top](<#contents>)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## Map
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Finally, the user is shown a map of the Andalucia region and where it is in relation to Spain, and the world if you wish to use the zoom feature. I inserted this google map link using https://google-map-generator.com/ . I have also given some information regarding the best way to travel to Andalucia and then the best ways to get around once you arrive. 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Map image](assets/readmeimages/map.PNG)
 
-**So….?**
+[Back to top](<#contents>)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Footer
+    
+The footer contains two elements. 
+1.	Telephone and Email details to get in touch if the user wants further information. I used Font Awesome icons for the telephone and email icon here.
+2.	Social Media links to Facebook, Instagram, and Twitter. I have also used the Font Awesome icons here instead of just writing the names. Each social media icon links out into a new page and takes the user to the log-in page of the desired social media site. If this was a real site and I had real social media accounts setup, I would direct the users into my own Love Andalucia account. 
+The footer is designed using the same colour palette as the navigation bar to give the page symmetry and balance between the top and the bottom features. 
 
-**Can I opt out?**
+    
+![Footer image](assets/readmeimages/footer.PNG)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+[Back to top](<#contents>)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Places
 
-**Anything more?**
+If the user selects the ‘Places to go’ option from the navigation bar, or the ‘Places’ option in the Welcome section they are taken to the Places page. 
+The user is asked a further question to focus their search criteria once again. “What type of holiday are you looking for?” Three options are again presented in the same style as the home page categories, and the same button format with alternating colours is given to maintain continuity between the pages. The user is now familiar with this system of drilling down through the search options. If no option is selected, the user can simply scroll down at will through the three categories one by one in the same order shown from left to right across the buttons. 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+![Places Categories image](assets/readmeimages/placesboxes.PNG)
 
-Happy coding!
+Scrolling down the page, or selecting a holiday category of City, Coastal or Country, the user is then given a list of the top 5 holiday destinations in the given category and an image relating to given category as well. 
+
+![Places mobile layout](assets/readmeimages/topfive.PNG)
+![Places tablet layout](assets/readmeimages/topfiveablet.PNG)
+
+When viewing this page with a mobile device, the images are shown under each list of best holiday destinations. However, when viewing this page in tablet form or bigger, I have used responsive design to float the images to the right of each list, making better use of the wider space available and improving the user experience.
+
+[Back to top](<#contents>)
+
+## Food
+
+This page is set out in a very similar way to the Places page to give continuity to the website as a whole and maintain a positive user experience whereby they can learn the navigation as they go through.
+If the user selects the ‘Places to Eat’ option from the navigation bar, or the ‘Food’ option in the Welcome section they are taken to the Food page. 
+The page starts in the same way as the Places page, with a question to the user. “What type of food do you want to eat?” Once again, the user is presented with three familiar options; Michelin Starred food, Traditional food, or Beach food. They can select an option and travel down the page directly to that section or scroll through each in turn.
+
+
+![Food page image](assets/readmeimages/foodboxes.PNG)
+
+Scrolling down the page or selecting a food category, the user is given some information about each category specifically relating to the Andalucia region and an example of each category is given in the form of an image.
+
+![Food Info image](assets/readmeimages/foodimage.PNG)
+
+[Back to top](<#contents>)
+
+## Events
+
+If the user selects the ‘Events’ option from the navigation bar or the ‘Events’ button in the Welcome section, they are taken to the Events page. 
+In line with the page format of Places and Food, the Events page poses the question “What are the most popular events in Andalucia?”
+There is an introductory text about festivals in the Andalucia region and then there is a table with information regarding the most popular annual events. I used the https://www.andalucia.com/festival/home.htm website to source information for this page. I have also included a link to this page on the website for users to click through and find further details as they wish. 
+
+
+![Events page image](assets/readmeimages/eventstable.PNG)
+
+Underneath the table is a button, which gives the user the option to sign up to a quarterly newsletter whereby they would receive regular information regarding events in the Andalucia region. If they click on the link it takes them to the Sign-Up page. 
+
+![Signup Button Image](assets/readmeimages/signupbutton.PNG)
+
+[Back to top](<#contents>)
+
+## Sign up Page
+
+This is the final stage on the user journey through the website. If they click on the sign-up link on the Events page, they are taken to the sign up page and invited to fill in their details in a form and submit. 
+They are prompted to fill in their first name, last name and email address and also choose whether they prefer summer events, winter events, or both by way of radio button options. All three data fields are required to be filled in along with at least one radio button.
+
+![Form image](assets/readmeimages/form.PNG)
+![Form confirmation Image](assets/readmeimages/formconfirmation.PNG)
+
+If the user fills in all the details correctly and clicks the submit button, they will be taken to a confirmation page, with a short message thanking them for signing up and giving them a link to go back to the home page and start their journey again. 
+For the purposes of this project, when you click the submit form button, the form is only validated, but not sent anywhere. 
+The html code for this page is based on the form page used in the Code Institute Love Running project. I then changed the code to fir my own page requirements and styled it in line with the Love Andalucia Mediterranean colour palette. 
+
+
+[Back to top](<#contents>)
+
+## Future Features 
+
+In the future, I would like to add more pages to the Love Andalucia website. These could include information pertaining to:
+
+* Dancing in Andalucia and the famous cultural style of Flamenco
+* Gallery
+* Agriculture
+
+If the Love Andalucia website is successful, I would like to use the ‘Love’ theme to branch out and create pages for all the 17 autonomous communities in Spain. For example, Love Valencia, Love La Rioja, Love Cantabria and so on. 
+I would also need to keep the events page up to date and add new popular events when necessary. 
+
+
+[Back to top](<#contents>)
+
+# Technologies Used
+
+I used the following technologies to create this website:
+
+* HTML5 – content and structure
+* CSS - styling
+* Balsamiq – wireframe designs
+* Gitpod – website deployment
+* Github – website hosting
+
+
+[Back to top](<#contents>)
+
+# Testing
+
+Please click [**_here_**](TESTING.md) to read more information about testing Love Andalucia
+
+[Back to top](<#contents>)
+
+# Deployment
+
+### **To deploy the project**
+The site was deployed to GitHub pages. The steps to deploy a site are as follows:
+  1. In the GitHub repository, navigate to the **Settings** tab.
+  2. Once in Settings, navigate to the **Pages** tab down the side menu.
+  3. Under **Source**, select the branch to **master**, then click **save**.
+  4. Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate a successful deployment.
+
+![Deploy image](assets/readmeimages/deploy.png)
+
+  The live link to the Github repository can be found here - https://quiltingcode.github.io/loveandalucia/
+
+### **To fork the repository using GitHub**
+A copy of the GitHub Repository can be made by forking the GitHub account. This copy can be viewed and changes can be made to the copy without affecting the original repository. Take the following steps to fork the repository:
+1. Log in to **GitHub** and locate the [repository](https://github.com/quiltingcode/loveandalucia).
+2. On the right hand side of the page inline with the repository name is a button called **'Fork'**, click on the button to create a copy of the original repository in your GitHub Account.
+
+![GitHub fork image](assets/readmeimages/fork.png)
+
+### **To create a local clone of this project**
+The method from cloning a project from GitHub is below:
+
+1. Under the repository’s name, click on the **code** tab.
+2. In the **Clone with HTTPS** section, click on the clipboard icon to copy the given URL.
+
+![Cloning image](assets/readmeimages/clone.png)
+
+3. In your IDE of choice, open **Git Bash**.
+4. Change the current working directory to the location where you want the cloned directory to be made.
+5. Type **git clone**, and then paste the URL copied from GitHub.
+6. Press **enter** and the local clone will be created.
+
+[Back to top](<#contents>)
+
+# Credits
+### Content
+
+* The introduction text for the Home page was researched from the following websites:
+    * https;//www.andalucia.com
+    * https;//www.airport-malaga.com
+    * https;//en.m.wikipedia.org/wiki/Andalusia
+    *  https;//www.visit-andalucia.com
+* Instructions on how to create responsive break points using the mobile first approach were taken from [Kinsta.com](https://kinsta.com/blog/responsive-web-design/#set-your-media-query-ranges-responsive-breakpoints)
+* Information used to write the top 5 coastal retreats was taken from: [Ruralidays.co.uk](https://www.ruralidays.co.uk/travel/beaches/best-beaches-in-andalucia-spain/)
+* Information for the top 5 beaches was taken from [Andalucia.com](https://www.andalucia.com/top10s/beaches.htm)
+* Information for the events was also taken from [Andalucia.com](https://www.andalucia.com/festival/home.htm)
+* [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
+* Instructions on how to implement form validation was taken from the Code Institute CSS module videos.
+* The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+* The fonts were taken from [Google Fonts](https://fonts.google.com/)
+* The map code was generated from [Google Map Generator](https://google-map-generator.com/)
+* The colour palette was created with the help of [Sessions.edu](https://sessions.edu) 
+* The inspiration for the three category boxes came from the Love Running Walk Through Project Meetup Times boxes.
+* I asked the slack community for help transferring my README file from a word document into the git hub repository. They suggested I use this [conversion website](https://products.aspose.app/words/conversion/word-to-md)  to convert my word docs to md docs. This worked for the TESTING file, although I had to add the images in, but it didn't work so well for the README file so I ended up writing this back into GitPod.
+
+### Media
+* The images used in this website are sourced from https://unsplash.com and https://pixabay.com
+* Some photos were compressed using https://tinypng.com/ 
+
+[Back to top](<#contents>)
+
+# Acknowledgements
+The site was completed as a Portfolio 1 Project piece for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/). As such I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), the Slack community, and all at the Code Institute for their help and support. Love Andalucia is a fictional website but based on an area that is very close to my heart. It would make me so happy if this was a real website that encouraged more people to fall in love with Andalucia as I have.
+
+Kelly Hutchison 2022.
+
+[Back to top](<#contents>)
