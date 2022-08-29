@@ -45,7 +45,7 @@ function rules() {
     introArea.innerHTML = 
     `<h3>Rules</h3>
         <ol id=rules>
-            <li>There are 10 questions</li>
+            <li>There are 12 questions</li>
             <li>Click to select one of three possible answers</li>
             <li>You will earn one point for each correct answer</li>
             <li>After each question, click next to continue</li>
@@ -233,7 +233,7 @@ let questions = [
         answer2: "A snowman",
         answer3: "A fire spirit",
         correct: "A snowman",
-        img: "elsa.png"   
+        img: "frozen.png"   
     },
     {
         question : "Which princess end up with seven trusty sidekicks whilst hiding in the forest?",
