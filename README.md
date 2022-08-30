@@ -1,11 +1,11 @@
 # **_Disney Sidekicks_**
 
-Disney Sidekicks is an interactive quiz website where users can test their Disney knowledge to the max. This is not just the usual quiz about the Disney main characters, but focuses solely on pets and sidekicks who have a supporting role and often get forgotten.  However, in many cases, these characters have an important role to play in the story and often have the best scripts and comic moments of all.  For example In 1992's Aladdin, who could have imagined such strength of character from of a rug, which couldn't even talk! This is the magic of Disney. 
+Disney Sidekicks is an interactive quiz website where users can test their Disney knowledge to the max. This is not just the usual quiz about the Disney main characters, but focuses solely on pets and sidekicks who have a supporting role and often get forgotten.  However, in many cases, these characters have an important role to play in the story and even have some of the best scripts and comic moments of all.  For example In 1992's Aladdin, who could have imagined such strength of character from of a carpet, which couldn't even talk! This is the magic of Disney. 
 
 
 Welcome to <a href="https://quiltingcode.github.io/disneysidekicks/" target="_blank" rel="noopener">Disney Sidekicks</a>
 
-![Disney Sidekicks responsive design](assets/readmeimages/mockup.PNG)
+![Disney Sidekicks responsive design](assets/readmeimages/mockup2.PNG)
 
 # Contents
 
@@ -38,7 +38,7 @@ Welcome to <a href="https://quiltingcode.github.io/disneysidekicks/" target="_bl
 
 ## Wireframes
 
-The wireframes for the Love Andalucia project were produced in Balsamiq.  There are frames for a desktop device and for a mobile device.  
+The wireframes for the Disney Sidekicks project were produced in Balsamiq.  There are frames for a desktop device and for a mobile device.  
 
 ## Desktop Device Wireframes 
 

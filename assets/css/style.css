@@ -11,7 +11,11 @@ body {
     font-size: 1.3rem;
     color: #252525;
     text-align: center;
-    background-color: #cfbae1;
+    /* background-color: #cfbae1; */
+    background-image: url('../images/background-up.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right;
     margin: 0;
     
 }
@@ -23,6 +27,7 @@ body {
     font-weight: 700;
     text-align: center;
     font-size: 3rem;
+    color: white;
 }
 
 .logo {
@@ -132,6 +137,10 @@ h4 {
 
     body {
         font-size: 1.9rem;
+    }
+
+    .heading {
+        font-size: 5rem;
     }
 
     #intro-area {
