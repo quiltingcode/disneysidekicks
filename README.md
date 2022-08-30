@@ -5,7 +5,7 @@ Disney Sidekicks is an interactive quiz website where users can test their Disne
 
 Welcome to <a href="https://quiltingcode.github.io/disneysidekicks/" target="_blank" rel="noopener">Disney Sidekicks</a>
 
-![Disney Sidekicks responsive design](assets/readmeimages/mockup2.PNG)
+![Disney Sidekicks responsive design](assets/readmeimages/mockup2.PNG.PNG)
 
 # Contents
 
@@ -42,29 +42,24 @@ The wireframes for the Disney Sidekicks project were produced in Balsamiq.  Ther
 
 ## Desktop Device Wireframes 
 
-![Homepage wireframe image](assets/readmeimages/homepagebalsamiq.PNG)
-![Places Page wireframe image](assets/readmeimages/placespagebalsamiq.PNG)
-![Food Page wireframe image](assets/readmeimages/foodpagebalsamiq.PNG)
-![Events Page wireframe image](assets/readmeimages/eventspagebalsamiq.PNG)
+![Homepage wireframe image](assets/readmeimages/homepage-desktop.PNG)
+![Questions Page wireframe image](assets/readmeimages/questions-desktop.PNG)
+![End of Quiz Page wireframe image](assets/readmeimages/finish-desktop.PNG)
 
 ## Mobile Device Wireframes
 
-![Homepage Mobile wireframe image](assets/readmeimages/homepagemobilebalsamiq.PNG) 
-![Places Page Mobile wireframe image](assets/readmeimages/placesmobilebalsamiq.PNG) 
-![Food Page Mobile wireframe image](assets/readmeimages/foodmobilebalsamiq.PNG) 
-![Events Page Mobile wireframe image](assets/readmeimages/eventsmobilebalsamiq.PNG) 
-![Signup Page Mobile wireframe image](assets/readmeimages/formmobilebalsamiq.PNG) 
+![Homepage wireframe image](assets/readmeimages/homepage-mobile.PNG)
+![Questions Page wireframe image](assets/readmeimages/questions-mobile.PNG)
+![End of Quiz Page wireframe image](assets/readmeimages/finish-mobile.PNG)
 
-I initially only designed the site on desktop size wireframes, and the intention was to put the events and signup information all together in one page. For this reason, there are only 4 desktop size wireframes. However, once I started to build the site, it made more sense to focus the page solely with events information in a table and then put a link to a separate sign-up page with a form. 
-Later during the build, I created the wireframes for the mobile device. Here you can see the events page and form signup page separately. 
-In the second and third pages for desktop, I wanted to include a photo with each of the three categories and therefore I changed the layout in the end to show each category under each other with a photo next to it. 
+I designed this quiz with a mobile design in mind initially, as I wanted to make sure the quiz was visible on a smaller screen.  However, I also created wireframes for a larger version of the quiz for desktop devices. The quiz has been created within one single html page, but through the use of Javascript, there are three main views of this page depending on which button is selected. Therefore, I have created wireframes for these three main views; the initial home page, the look of the quiz itself, and the final end of quiz page. 
 
 
 [Back to top](<#contents>)
 
 ## Site Structure
 
-Love Andalucia has five pages.  The home page is the default loading page, and then there is a navigation bar to access the places, food, and events pages. From the events page, you can click the sign-up button to access the form page. From any of the pages you can also click on the Love Andalucia header to return the home page. 
+The Disney Sidekicks quiz has been craeted within a single HTML page. The homepage is the initial default loading page with two buttons available to the user. 'Start' or 'Rules'. The 'Rules' button shows the rules on screen, and the 'Start' button starts the quiz. You can move through each page of the quiz via a 'Next' button and then once the quiz has finished, the user is taken to a Summary page where they are told their score, and given two more button options; 'Home', which takes them back to the homepage, or 'Play' Again which takes them back to the start of a new quiz.
 
 [Back to top](<#contents>)
 
@@ -78,7 +73,7 @@ The fonts I chose were ‘Nothing you could do’ for the h1 and h2 headings and
 
 The colour scheme I chose was initially based on the idea of a Mediterranean blue colour, similar to the blue roofs painted in traditional old-style Greek and Spanish towns. From there, I used the sessions.edu colour combination website to find a set of complimentary tones to give the whole website a bright, fresh, Mediterranean look and feel. 
 
-![Colour Palate image](assets/readmeimages/typography.PNG)
+![Colour Palate image](assets/readmeimages/topography.PNG)
 
 
 [Back to top](<#contents>)
