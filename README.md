@@ -5,7 +5,7 @@ Disney Sidekicks is an interactive quiz website where users can test their Disne
 
 Welcome to <a href="https://quiltingcode.github.io/disneysidekicks/" target="_blank" rel="noopener">Disney Sidekicks</a>
 
-![Disney Sidekicks responsive design](assets/readmeimages/mockup2.PNG.PNG)
+![Disney Sidekicks responsive design](assets/readmeimages/mockup2.PNG)
 
 # Contents
 
@@ -59,7 +59,7 @@ I designed this quiz with a mobile design in mind initially, as I wanted to make
 
 ## Site Structure
 
-The Disney Sidekicks quiz has been craeted within a single HTML page. The homepage is the initial default loading page with two buttons available to the user. 'Start' or 'Rules'. The 'Rules' button shows the rules on screen, and the 'Start' button starts the quiz. You can move through each page of the quiz via a 'Next' button and then once the quiz has finished, the user is taken to a Summary page where they are told their score, and given two more button options; 'Home', which takes them back to the homepage, or 'Play' Again which takes them back to the start of a new quiz.
+The Disney Sidekicks quiz has been created within a single HTML page. The homepage is the initial default loading page with two buttons available to the user. 'Start' or 'Rules'. The 'Rules' button shows the rules on screen, and the 'Start' button starts the quiz. You can move through each page of the quiz via a 'Next' button and then once the quiz has finished, the user is taken to a Summary page where they are told their score, and given two more button options; 'Home', which takes them back to the homepage, or 'Play Again' which takes them back to the start of a new quiz.
 
 [Back to top](<#contents>)
 
@@ -67,13 +67,17 @@ The Disney Sidekicks quiz has been craeted within a single HTML page. The homepa
 
  * ### Typography
 
-The fonts I chose were ‘Nothing you could do’ for the h1 and h2 headings and ‘Itim’ for the body.  If these fonts are not available, they revert to cursive and sans-serif.  I chose the ‘Nothing you could do’ header primarily as I envisaged an Italic style calligraphy font, but then I wanted something more legible for the main text, so I found ‘Itim’ gave a nice contrast whilst maintaining something easier on the eye for larger areas of text. 
+The fonts I chose were ‘Amatic SC’ for the h1 main headings and the buttons, and ‘Kalam’ for the body text and questions.  If these fonts are not available, they revert to cursive and sans-serif.  I chose the ‘Amatic SC’ font primarily as I wanted something fun and playful to reflect the theme of the quiz. This also automatically captilises all the letters which is good for the buttons and makes the main header stand out. The 'Kalam' body font nicely compliments the header font in it's fun 'handwriting' style whilst remaining clearly legible for users to read the quiz questions and answers.
 
  * ### Colour Scheme
 
-The colour scheme I chose was initially based on the idea of a Mediterranean blue colour, similar to the blue roofs painted in traditional old-style Greek and Spanish towns. From there, I used the sessions.edu colour combination website to find a set of complimentary tones to give the whole website a bright, fresh, Mediterranean look and feel. 
+Initially, I wanted to use same colour palette as those which are used for the original Disney Magic Kingdom logo. These are:
 
-![Colour Palate image](assets/readmeimages/topography.PNG)
+![magic Kingdom Colour Palette](assets/readmeimages/magickingdomcolors.PNG.PNG)
+
+However, looking at this in place, the colours appeared to me very dated. So I continued my research further into more modern Disney colour palettes. I soon came across a Disney colour palette website 
+
+![Colour Palette image](assets/readmeimages/topography.PNG)
 
 
 [Back to top](<#contents>)
