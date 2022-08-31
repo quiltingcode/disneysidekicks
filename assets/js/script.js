@@ -1,6 +1,4 @@
-// Wait for the DOM to finish loading before running the game
-//Get the button elements and add event listeners to them
-
+// List of variables created for the game
 
 let startButton = document.getElementById("start-button"); 
 let rulesButton = document.getElementById("rules-button"); 
@@ -12,7 +10,6 @@ let endOfGameArea = document.getElementById("end-of-game");
 let questionTitle = document.getElementById("question-title");
 let questionNumber = document.getElementById("question-number");
 let questionElement = document.getElementById("question");
-let answerElements = document.getElementById("answer-area");
 let answerButtons = document.getElementsByClassName("answer-btn");
 let answerOne = document.getElementById("answer1");
 let answerTwo = document.getElementById("answer2");
@@ -87,16 +84,19 @@ function displayQuestion(currentQuestion) {
         questionImg.setAttribute('src', "assets/images/" + currentQuestion.img);
         
     }
-    for (let i = 0; i < answerButtons.length; i++) {
-        answerButtons[i].addEventListener('click', checkAnswer);
-    }
+
+    answerOne.addEventListener('click', checkAnswer);
+    answerTwo.addEventListener('click', checkAnswer);
+    answerThree.addEventListener('click', checkAnswer);
 
 }
+
+
+
 
 function checkAnswer() {
     console.log('Checking answer');
     console.log(questions[0].correct);
-    for (let i = 0; i < answerButtons.length; i++){
         if(this.innerHTML === questions[0].correct) {
             this.classList.add('btn-correct');  
             console.log("Correct!");
@@ -104,15 +104,9 @@ function checkAnswer() {
         } else {
             this.classList.add('btn-wrong');
             console.log("Wrong!")
-
-        }
-    }
-
+        }  
     nextButton.classList.remove('hide');
-    if (questionCounter === 12) {
-        nextButton.innerText = "End";
-        endGame();
-    }
+   
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].removeEventListener('click', checkAnswer);
     }
@@ -123,12 +117,13 @@ function checkAnswer() {
  */
  
  function incrementScore() {
+    correctAnswerCounter++;
     score = (correctAnswerCounter * scorePoints);
     scoreText.innerText = score;
     console.log("Adding points");
-    correctAnswerCounter++;
-    console.log("Total score is " + correctAnswerCounter);
     
+    console.log("Total score is " + correctAnswerCounter);
+    return;
 }
 
 nextButton.addEventListener('click', nextQuestion);
@@ -140,19 +135,24 @@ function nextQuestion() {
         answerButtons[i].classList.remove('btn-wrong');
     }
     questions.splice(0, 1);
-    runGame();
+    if (questionCounter === 12) {
+        nextButton.classList.remove('hide');
+        nextButton.innerHTML = 'End';
+        endGame();
+    } else {
+        runGame();
+    }
+    
 }
-
-
 
 function endGame() {
     console.log("Calculating total score...")
     questionArea.classList.add('hide');
     endOfGameArea.classList.remove('hide');
-    finalScore.innerText = `${correctAnswerCounter}`
+    finalScore = correctAnswerCounter * scorePoints;
     if (correctAnswerCounter <= 60) {
         endImg.setAttribute('src', "assets/images/carpet-sad.png");
-        finalScoreText.innerHTML = `"Oh no! You only scored ${correctAnswerCounter}. Better luck next time!"`
+        finalScoreText.innerHTML = `Oh no! You only scored ${finalScore}. Better luck next time!`;
     }
 
 }
