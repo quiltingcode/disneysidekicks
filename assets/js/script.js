@@ -19,14 +19,16 @@ let answerTwo = document.getElementById("answer2");
 let answerThree = document.getElementById("answer3");
 let logoImg = document.getElementById("logo-img");
 let questionImg = document.getElementById("question-img");
+let endImg = document.getElementById("end-img");
 let shuffledQuestions = [];
 let currentQuestionIndex = [];
 let currentQuestion = {};
-let score = 0
+let score = 0;
 let scoreText = document.getElementById("score");
 let questionCounter = 0;
-let finalScore = document.getElementById("final-score")
-let correctAnswerCounter = 0
+let finalScore = document.getElementById("final-score");
+let finalScoreText = document.getElementById("final-score-text");
+let correctAnswerCounter = 0;
 
 const scorePoints = 10;
 const maxQuestion = 12;
@@ -47,7 +49,7 @@ function rules() {
         <ol id=rules>
             <li>There are 12 questions</li>
             <li>Click to select one of three possible answers</li>
-            <li>You will earn one point for each correct answer</li>
+            <li>You will earn 10 points for each correct answer</li>
             <li>After each question, click next to continue</li>
         </ol>`
         rulesButton.classList.add('hide');
@@ -88,6 +90,7 @@ function displayQuestion(currentQuestion) {
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].addEventListener('click', checkAnswer);
     }
+
 }
 
 function checkAnswer() {
@@ -120,7 +123,7 @@ function checkAnswer() {
  */
  
  function incrementScore() {
-    score++
+    score = (correctAnswerCounter * scorePoints);
     scoreText.innerText = score;
     console.log("Adding points");
     correctAnswerCounter++;
@@ -147,6 +150,10 @@ function endGame() {
     questionArea.classList.add('hide');
     endOfGameArea.classList.remove('hide');
     finalScore.innerText = `${correctAnswerCounter}`
+    if (correctAnswerCounter <= 60) {
+        endImg.setAttribute('src', "assets/images/carpet-sad.png");
+        finalScoreText.innerHTML = `"Oh no! You only scored ${correctAnswerCounter}. Better luck next time!"`
+    }
 
 }
 
