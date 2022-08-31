@@ -91,9 +91,6 @@ function displayQuestion(currentQuestion) {
 
 }
 
-
-
-
 function checkAnswer() {
     console.log('Checking answer');
     console.log(questions[0].correct);
@@ -104,7 +101,12 @@ function checkAnswer() {
         } else {
             this.classList.add('btn-wrong');
             console.log("Wrong!")
-        }  
+            for (let i = 0; i < answerButtons.length; i++) {
+                if (answerButtons[i].innerHTML === questions[0].correct) {
+                    answerButtons[i].classList.add('btn-correct'); 
+                }
+            } 
+        } 
     nextButton.classList.remove('hide');
    
     for (let i = 0; i < answerButtons.length; i++) {
@@ -137,7 +139,7 @@ function nextQuestion() {
     questions.splice(0, 1);
     if (questionCounter === 12) {
         nextButton.classList.remove('hide');
-        nextButton.innerHTML = 'End';
+        nextButton.innerText = 'End';
         endGame();
     } else {
         runGame();
@@ -149,8 +151,8 @@ function endGame() {
     console.log("Calculating total score...")
     questionArea.classList.add('hide');
     endOfGameArea.classList.remove('hide');
-    finalScore = correctAnswerCounter * scorePoints;
-    if (correctAnswerCounter <= 60) {
+    finalScore.innerText = correctAnswerCounter * scorePoints;
+    if (correctAnswerCounter <= 6) {
         endImg.setAttribute('src', "assets/images/carpet-sad.png");
         finalScoreText.innerHTML = `Oh no! You only scored ${finalScore}. Better luck next time!`;
     }
