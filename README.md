@@ -16,14 +16,9 @@ Welcome to <a href="https://quiltingcode.github.io/disneysidekicks/" target="_bl
     *  [Typography](<#typography>)
     *  [Colour Scheme](<#colour-scheme>)
 * [**Current Features**](<#current-features>)
-    * [**Navigation menu**](<#navigation-menu>)
-    * [**Welcome Section**](<#welcome-section>)
-    * [**Map**](<#map>)
-    * [**Footer**](<#footer>)
-    * [**Places**](<#places>)
-    * [**Food**](<#food>)
-    * [**Events**](<#events>)
-    * [**Sign up Page**](<#sign-up-page>)
+    * [**Home Page**](<#home-page>)
+    * [**Quiz Page**](<#quiz-page>)
+    * [**End Page**](<#end-page>)
 * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#technologies-used>)
 * [**Testing**](<#testing>)
@@ -67,25 +62,32 @@ The Disney Sidekicks quiz has been created within a single HTML page. The homepa
 
  * ### Typography
 
-The fonts I chose were ‘Amatic SC’ for the h1 main headings and the buttons, and ‘Kalam’ for the body text and questions.  If these fonts are not available, they revert to cursive and sans-serif.  I chose the ‘Amatic SC’ font primarily as I wanted something fun and playful to reflect the theme of the quiz. This also automatically captilises all the letters which is good for the buttons and makes the main header stand out. The 'Kalam' body font nicely compliments the header font in it's fun 'handwriting' style whilst remaining clearly legible for users to read the quiz questions and answers.
+The fonts I chose were ‘Amatic SC’ for the h1 main heading and the buttons, and ‘Kalam’ for the body text and questions.  If these fonts are not available, they revert to cursive and sans-serif.  I chose the ‘Amatic SC’ font primarily as I wanted something fun and playful to reflect the theme of the quiz. This also automatically captilises all the letters which is good for the buttons and makes the main header stand out. The 'Kalam' body font nicely compliments the header font in it's fun 'handwriting' style whilst remaining clearly legible for users to read the quiz questions and answers.
 
  * ### Colour Scheme
 
-Initially, I wanted to use same colour palette as those which are used for the original Disney Magic Kingdom logo. These are:
+Initially, I wanted to use same colour palette as those which are used for the original Disney Magic Kingdom logo; found [here](https://www.schemecolor.com/disney-color.php) These are:
 
-![magic Kingdom Colour Palette](assets/readmeimages/magickingdomcolors.PNG.PNG)
+![magic Kingdom Colour Palette](assets/readmeimages/magickingdomcolors.PNG)
 
-However, looking at this in place, the colours appeared to me very dated. So I continued my research further into more modern Disney colour palettes. I soon came across a Disney colour palette website 
+However, having styled these into the backgruond, the colours appeared to me quite dated. So I continued my research further into more modern Disney colour palettes. I soon came across a Disney colour palette [website](https://www.sitepoint.com/15-color-schemes-from-disney-heroes-and-villains/) which suggested various colour palettes depending on the style of the Disney film, whether it was based on princesses, or animals, or villains etc. 
 
 ![Colour Palette image](assets/readmeimages/topography.PNG)
 
+From this 'princess' colour scheme, I chose to style the background and game area container with a combination of the #a4def9 and the #c59fc9 tones, which looked nice, and to me represent a combination of a classic 'Cinderella' tone with a more modern background 'Rapunzel' tone. 
+
+When I took a step back and looked at these through the [Am I Responsive](https://ui.dev/amiresponsive) Mockup website, I still thought it looked a bit plain. 
+
+![Princess tones responsive design](assets/readmeimages/mockup1.PNG)
+
+In the end, I kept the 'Cinderella' blue and changed the background for a Disney image from the 2009 film 'Up' that worked on various screen sizes. I had to change the colour of the header to white so that you could still see it clearly through the coloured baloons. 
 
 [Back to top](<#contents>)
 
 # Current Features
 
   
-## Navigation Menu
+## Home Page
 
 At the top of the website, on all pages, is the main title of the website and the navigation bar underneath. This makes it easy to navigate back to the homepage or to the three other pages of the website easily from any page. The nav bar introduces the colour palette to the user and indicates which page you are currently browsing, by underlining the current page.
 The title header can also be clicked on as a navigation tool back to the home page.
@@ -94,26 +96,24 @@ The title header can also be clicked on as a navigation tool back to the home pa
 
 [Back to top](<#contents>)
 
-## welcome Section
+## Quiz Page
 
 On the home page, I have written a brief introduction to the Andalucia region and included an inviting photo to encourage the user to read on. 
-Then the user is posed the question; Why come to Andalucia? This gives the user the option to focus their search into one of three categories. These three buttons use all three tones from web design colour palette. 
-1.	Places – which takes them to the same place as the ‘Places to Go’ navigation bar option. This page describes places in Andalucia in more detail.
-2.	Food – which takes them to the same place as the ‘Places to Eat’ navigation bar option. This page describes the Andalucian cuisine in more detail. 
-3.	Events – which takes them to the same place as the ‘Events’ navigation bar option, and displays a list of the most famous Andalucian events. 
- 
+
 
 ![Welcome Section Image](assets/readmeimages/welcome.PNG)
 
 [Back to top](<#contents>)
 
-## Map
+## End Page
 
-Finally, the user is shown a map of the Andalucia region and where it is in relation to Spain, and the world if you wish to use the zoom feature. I inserted this google map link using https://google-map-generator.com/ . I have also given some information regarding the best way to travel to Andalucia and then the best ways to get around once you arrive. 
+On the home page, I have written a brief introduction to the Andalucia region and included an inviting photo to encourage the user to read on. 
 
-![Map image](assets/readmeimages/map.PNG)
+
+![Welcome Section Image](assets/readmeimages/welcome.PNG)
 
 [Back to top](<#contents>)
+
 
 ## Footer
     
@@ -126,65 +126,6 @@ The footer is designed using the same colour palette as the navigation bar to gi
 ![Footer image](assets/readmeimages/footer.PNG)
 
 [Back to top](<#contents>)
-
-## Places
-
-If the user selects the ‘Places to go’ option from the navigation bar, or the ‘Places’ option in the Welcome section they are taken to the Places page. 
-The user is asked a further question to focus their search criteria once again. “What type of holiday are you looking for?” Three options are again presented in the same style as the home page categories, and the same button format with alternating colours is given to maintain continuity between the pages. The user is now familiar with this system of drilling down through the search options. If no option is selected, the user can simply scroll down at will through the three categories one by one in the same order shown from left to right across the buttons. 
-
-
-![Places Categories image](assets/readmeimages/placesboxes.PNG)
-
-Scrolling down the page, or selecting a holiday category of City, Coastal or Country, the user is then given a list of the top 5 holiday destinations in the given category and an image relating to given category as well. 
-
-![Places mobile layout](assets/readmeimages/topfive.PNG)
-![Places tablet layout](assets/readmeimages/topfiveablet.PNG)
-
-When viewing this page with a mobile device, the images are shown under each list of best holiday destinations. However, when viewing this page in tablet form or bigger, I have used responsive design to float the images to the right of each list, making better use of the wider space available and improving the user experience.
-
-[Back to top](<#contents>)
-
-## Food
-
-This page is set out in a very similar way to the Places page to give continuity to the website as a whole and maintain a positive user experience whereby they can learn the navigation as they go through.
-If the user selects the ‘Places to Eat’ option from the navigation bar, or the ‘Food’ option in the Welcome section they are taken to the Food page. 
-The page starts in the same way as the Places page, with a question to the user. “What type of food do you want to eat?” Once again, the user is presented with three familiar options; Michelin Starred food, Traditional food, or Beach food. They can select an option and travel down the page directly to that section or scroll through each in turn.
-
-
-![Food page image](assets/readmeimages/foodboxes.PNG)
-
-Scrolling down the page or selecting a food category, the user is given some information about each category specifically relating to the Andalucia region and an example of each category is given in the form of an image.
-
-![Food Info image](assets/readmeimages/foodimage.PNG)
-
-[Back to top](<#contents>)
-
-## Events
-
-If the user selects the ‘Events’ option from the navigation bar or the ‘Events’ button in the Welcome section, they are taken to the Events page. 
-In line with the page format of Places and Food, the Events page poses the question “What are the most popular events in Andalucia?”
-There is an introductory text about festivals in the Andalucia region and then there is a table with information regarding the most popular annual events. I used the https://www.andalucia.com/festival/home.htm website to source information for this page. I have also included a link to this page on the website for users to click through and find further details as they wish. 
-
-
-![Events page image](assets/readmeimages/eventstable.PNG)
-
-Underneath the table is a button, which gives the user the option to sign up to a quarterly newsletter whereby they would receive regular information regarding events in the Andalucia region. If they click on the link it takes them to the Sign-Up page. 
-
-![Signup Button Image](assets/readmeimages/signupbutton.PNG)
-
-[Back to top](<#contents>)
-
-## Sign up Page
-
-This is the final stage on the user journey through the website. If they click on the sign-up link on the Events page, they are taken to the sign up page and invited to fill in their details in a form and submit. 
-They are prompted to fill in their first name, last name and email address and also choose whether they prefer summer events, winter events, or both by way of radio button options. All three data fields are required to be filled in along with at least one radio button.
-
-![Form image](assets/readmeimages/form.PNG)
-![Form confirmation Image](assets/readmeimages/formconfirmation.PNG)
-
-If the user fills in all the details correctly and clicks the submit button, they will be taken to a confirmation page, with a short message thanking them for signing up and giving them a link to go back to the home page and start their journey again. 
-For the purposes of this project, when you click the submit form button, the form is only validated, but not sent anywhere. 
-The html code for this page is based on the form page used in the Code Institute Love Running project. I then changed the code to fir my own page requirements and styled it in line with the Love Andalucia Mediterranean colour palette. 
 
 
 [Back to top](<#contents>)
