@@ -8,35 +8,16 @@ The Disney Sidekicks site has been passed through the [W3C html Validator](https
 
 ## W3C html Validation Results
 
-* Index.html - 1 error. Details of these can be found in the [Bugs](<#known-bugs>) section. All the issues were easily fixed and after a retest, no more errors were returned.
+* Index.html - 1 error. Details can be found in the [Bugs](<#known-bugs>) section. The issue was easily fixed and after a retest, no more errors were returned.
 
-![W3C html home page validation results](assets/readmeimages/w3chtmlpass.PNG)
+![W3C html home page validation results](assets/readmeimages/w3validator-pass.PNG)
 
-* Places.html -  
-
-![W3C html places page validation results](assets/readmeimages/w3chtmlpass.PNG)
-
-* Food.html -  
-
-![W3C html food page validation results](assets/readmeimages/w3chtmlpass.PNG)
-
-* Events.html -  2 errors and 2 warnings found. Details of these can be found in the [Bugs](<#known-bugs>) section. All the issues were easily fixed and after a retest, no more errors were returned.
-
-![W3C html events page validation pass results](assets/readmeimages/w3chtmlpass.PNG)
-
-* Form.html -  
-
-![W3C html form page validation results](assets/readmeimages/w3chtmlpass.PNG)
-
-* Formconfirmation.html -  
-
-![W3C html form page validation results](assets/readmeimages/w3chtmlpass.PNG)
 
 ## W3C CSS Validation Results
 
-* Style.css – 1 error found. Details of the error can be found in the [Bugs](<#known-bugs>) section. The issue was easily fixed and after a retest, no more errors were returned.
+* Style.css – No errors were found.
 
-![CSS validation test pass results](assets/readmeimages/cssvalidation.PNG)
+![CSS validation test pass results](assets/readmeimages/w3c-css-validator-pass.PNG)
 
 ## Responsiveness Test
 

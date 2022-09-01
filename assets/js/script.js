@@ -151,7 +151,8 @@ function endGame() {
     console.log("Calculating total score...")
     questionArea.classList.add('hide');
     endOfGameArea.classList.remove('hide');
-    finalScore.innerText = correctAnswerCounter * scorePoints;
+    finalScore = correctAnswerCounter * scorePoints;
+    finalScore.innerText = `${finalScore}`;
     if (correctAnswerCounter <= 8) {
         endImg.setAttribute('src', "assets/images/carpet-sad.png");
         finalScoreText.innerHTML = `Oh no! You only scored ${finalScore}. Better luck next time!`;
