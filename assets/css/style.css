@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Kalam:wght@300&display=swap');
 
-/* --------- Global style */
+/* Global style */
 
 html {
     font-size: 16px;
@@ -20,7 +20,7 @@ body {
     
 }
 
-/* Heading */
+/* HomePage */
 
 .heading {
     font-family: 'Amatic SC', cursive, sans-serif;
@@ -35,12 +35,27 @@ body {
     
 }
 
-#question-img{
-    height: 15vh;
+#rules {
+    text-align: left;
+    font-size: 1.2rem;
 }
 
-#end-img {
-    height: 33vh;
+
+
+/* QuizPage */
+
+/* Quiz Question Area */
+
+#game-area {
+    max-width: 80%;
+    margin: auto;
+    border: 2px solid black;
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 2px;
+    background-color: #a4def9;
+
 }
 
 #question-area h3 {
@@ -59,22 +74,54 @@ h4 {
     margin: 5px;
 }
 
-#rules {
-    text-align: left;
-    font-size: 1.2rem;
+#question-img{
+    height: 15vh;
 }
 
-#game-area {
-    max-width: 80%;
+#question-title {
+    margin: 2%;
+}
+
+/* Answer Area */
+
+#answer-area {
+    display: grid;
+    gap: 10px;
+    max-width: 800px;
     margin: auto;
-    border: 2px solid black;
-    padding: 15px;
-    text-align: center;
-    justify-content: center;
-    box-shadow: 0 0 10px 2px;
-    background-color: #a4def9;
-
 }
+
+.answer-btn {
+    font-family: "Kalam", cursive, sans-serif;
+    color: black;
+    font-size: large;
+    padding: 8px;
+    border: 2px solid darkcyan;
+    border-radius: 5px;
+}
+
+.answer-btn:hover {
+    border: 2px solid black;
+}
+
+/* Score Area */
+
+#score-area {
+    padding: 0px 20px 0px 20px;
+}
+
+#score {
+    margin: 5px;
+}
+
+/* End Page */
+/* Final Score Image */
+
+#end-img {
+    height: 33vh;
+}
+
+/* Buttons */
 
 .start-btn, .next-btn, .home-btn, .rules-btn, .btn {
     font-family: 'Amatic SC', cursive, sans-serif;
@@ -84,6 +131,10 @@ h4 {
     border: 2px solid darkcyan;
     border-radius: 5px;
     margin: 10px;
+}
+
+.btn:hover {
+    border: 2px solid black;
 }
 
 #home {
@@ -102,46 +153,10 @@ h4 {
     border: 2px solid black;
 }
 
-#question-title {
-    margin: 2%;
-}
-
-
-#answer-area {
-    display: grid;
-    gap: 10px;
-    max-width: 800px;
-    margin: auto;
-}
-
-.answer-btn {
-    font-family: "Kalam", cursive, sans-serif;
-    color: black;
-    font-size: large;
-    padding: 8px;
-    border: 2px solid darkcyan;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    border: 2px solid black;
-}
-
-.answer-btn:hover {
-    border: 2px solid black;
-}
-
+/* Classes for Javascript functions */
 
 .hide {
     display: none;
-}
-
-#score-area {
-    padding: 0px 20px 0px 20px;
-}
-
-#score {
-    margin: 5px;
 }
 
 .btn-correct {
@@ -151,6 +166,9 @@ h4 {
 .btn-wrong {
     background-color: red;
 }
+
+/* Media Queries */
+
 
 /* for medium tablet screen size from 768px wide and up */
 @media screen and (min-width: 768px) {

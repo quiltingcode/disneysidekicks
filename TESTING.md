@@ -4,7 +4,7 @@
 
 ## Code Validation
 
-The Disney Sidekicks site has been passed through the [W3C html Validator](https://validator.w3.org/) and the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
+The Disney Sidekicks site has been passed through the [W3C html Validator](https://validator.w3.org/), the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the [JS Hint Validator](https://jshint.com/).
 
 ## W3C html Validation Results
 
@@ -18,6 +18,10 @@ The Disney Sidekicks site has been passed through the [W3C html Validator](https
 * Style.css – No errors were found.
 
 ![CSS validation test pass results](assets/readmeimages/w3c-css-validator-pass.PNG)
+
+## JS Hint Validation Results
+
+* 
 
 ## Responsiveness Test
 

@@ -1,14 +1,13 @@
 // List of variables created for the game
 
-let startButton = document.getElementById("start-button"); 
-let rulesButton = document.getElementById("rules-button"); 
-let nextButton = document.getElementById("next-button");
-let playAgainButton = document.getElementById("play-again-btn");
-let introArea = document.getElementById("intro-area");
-let questionArea = document.getElementById("question-area");
-let endOfGameArea = document.getElementById("end-of-game");
+const startButton = document.getElementById("start-button"); 
+const rulesButton = document.getElementById("rules-button"); 
+const nextButton = document.getElementById("next-button");
+const playAgainButton = document.getElementById("play-again-btn");
+const introArea = document.getElementById("intro-area");
+const questionArea = document.getElementById("question-area");
+const endOfGameArea = document.getElementById("end-of-game");
 let questionTitle = document.getElementById("question-title");
-let questionNumber = document.getElementById("question-number");
 let questionElement = document.getElementById("question");
 let answerButtons = document.getElementsByClassName("answer-btn");
 let answerOne = document.getElementById("answer1");
@@ -152,7 +151,7 @@ function endGame() {
     questionArea.classList.add('hide');
     endOfGameArea.classList.remove('hide');
     finalScore = correctAnswerCounter * scorePoints;
-    finalScore.innerText = `${finalScore}`;
+    finalScoreText.innerHTML = ` Congratulations! Your total score is: ${finalScore}.`;
     if (correctAnswerCounter <= 8) {
         endImg.setAttribute('src', "assets/images/carpet-sad.png");
         finalScoreText.innerHTML = `Oh no! You only scored ${finalScore}. Better luck next time!`;
