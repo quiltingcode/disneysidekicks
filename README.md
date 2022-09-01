@@ -206,32 +206,30 @@ The method from cloning a project from GitHub is below:
 # Credits
 ### Content
 
-* The introduction text for the Home page was researched from the following websites:
-    * https;//www.andalucia.com
-    * https;//www.airport-malaga.com
-    * https;//en.m.wikipedia.org/wiki/Andalusia
-    *  https;//www.visit-andalucia.com
-* Instructions on how to create responsive break points using the mobile first approach were taken from [Kinsta.com](https://kinsta.com/blog/responsive-web-design/#set-your-media-query-ranges-responsive-breakpoints)
-* Information used to write the top 5 coastal retreats was taken from: [Ruralidays.co.uk](https://www.ruralidays.co.uk/travel/beaches/best-beaches-in-andalucia-spain/)
-* Information for the top 5 beaches was taken from [Andalucia.com](https://www.andalucia.com/top10s/beaches.htm)
-* Information for the events was also taken from [Andalucia.com](https://www.andalucia.com/festival/home.htm)
+* The colour scheme was researched from the following websites:
+    * https://www.sitepoint.com/15-color-schemes-from-disney-heroes-and-villains/
+    * https://www.schemecolor.com/disney-color.php
+* Tutorials on how to create a quiz game with javascript were found on Youtube. One by [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k) and another by [Brian Design](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
+* I also watched another tutorial by [Web Dev Simplified](https://www.youtube.com/watch?v=rIO5326FgPE) explaining the CSS Box Model, to help create the various game containers.
+* Information for how to Hide and Show Divs was taken from [W3Schools](W3schools.com/howto/howto_js_toggle_hide_show.asp)
 * [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
-* Instructions on how to implement form validation was taken from the Code Institute CSS module videos.
-* The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+* The Favicon in the browser was created in https://favicon.io/
 * The fonts were taken from [Google Fonts](https://fonts.google.com/)
-* The map code was generated from [Google Map Generator](https://google-map-generator.com/)
-* The colour palette was created with the help of [Sessions.edu](https://sessions.edu) 
-* The inspiration for the three category boxes came from the Love Running Walk Through Project Meetup Times boxes.
-* I asked the slack community for help transferring my README file from a word document into the git hub repository. They suggested I use this [conversion website](https://products.aspose.app/words/conversion/word-to-md)  to convert my word docs to md docs. This worked for the TESTING file, although I had to add the images in, but it didn't work so well for the README file so I ended up writing this back into GitPod.
+* I used two different websites for help learning how to shuffle the questions array each time a game was started. I used [Geeks for Geeks](https://www.geeksforgeeks.org/shuffle-or-randomize-a-list-in-java/) and [Sebhastian.com](https://sebhastian.com/shuffle-array-javascript/#:~:text=A%20JavaScript%20array%20elements%20can,using%20the%20sort()%20method.&text=The%20JavaScript%20Array%20sort(),value%20returned%20by%20that%20function.)
+* The quiz questions were created with the aid of [Bustle.com](https://www.bustle.com/entertainment/91807-35-disney-sidekicks-ranked-from-meeko-flit-to-the-seven-dwarves)
+ 
 
 ### Media
-* The images used in this website are sourced from https://unsplash.com and https://pixabay.com
-* Some photos were compressed using https://tinypng.com/ 
+* The images used in this website were sourced from:
+  ** imgbin.com
+  ** pngwing.com
+* The background image was sourced from https://fondosmil.com/disney
+* The question images were compressed using https://tinypng.com/ 
 
 [Back to top](<#contents>)
 
 # Acknowledgements
-The site was completed as a Portfolio 1 Project piece for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/). As such I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), the Slack community, and all at the Code Institute for their help and support. Love Andalucia is a fictional website but based on an area that is very close to my heart. It would make me so happy if this was a real website that encouraged more people to fall in love with Andalucia as I have.
+The site was completed as a Portfolio 2 Project piece for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/). As such I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), the Slack community, and all at the Code Institute for their help and support. I love Disney, and it was a joy to be able to create a quiz dedicated to somethin i'm really passionate about.
 
 Kelly Hutchison 2022.
 
