@@ -84,7 +84,18 @@ h4 {
 
 #home {
     text-decoration: none;
-    color: #252525;
+    font-family: 'Amatic SC', cursive, sans-serif;
+    color: black;
+    font-size: larger;
+    padding: 8px;
+    border: 2px solid darkcyan;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: white;
+}
+
+#home:hover {
+    border: 2px solid black;
 }
 
 #question-title {
@@ -109,11 +120,11 @@ h4 {
 }
 
 .btn:hover {
-    border: 3px solid black;
+    border: 2px solid black;
 }
 
 .answer-btn:hover {
-    border: 3px solid black;
+    border: 2px solid black;
 }
 
 
