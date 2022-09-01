@@ -152,7 +152,7 @@ function endGame() {
     questionArea.classList.add('hide');
     endOfGameArea.classList.remove('hide');
     finalScore.innerText = correctAnswerCounter * scorePoints;
-    if (correctAnswerCounter <= 6) {
+    if (correctAnswerCounter <= 8) {
         endImg.setAttribute('src', "assets/images/carpet-sad.png");
         finalScoreText.innerHTML = `Oh no! You only scored ${finalScore}. Better luck next time!`;
     }
@@ -413,7 +413,7 @@ let questions = [
         img: "archimedes.png"   
     },
     {
-        question : "Who is Pooh's kind, sweet, yet nervous best friend?",
+        question : "Who is Pooh's sweet, yet nervous best friend?",
         answer1: "Tigger",
         answer2: "Piglet",
         answer3: "Rabbit",

@@ -92,62 +92,58 @@ In the end, I kept the 'Cinderella' blue and changed the background for a Disney
 
 At the top of the website is the main title and an introduction to the quiz. The game logo is displayed here, and I've also used the same image for the site's Favicon in the browser. This image shows the most famous of all the Disney characters, Mickey Mouse, and his  trusty sidekick, Pluto.  Underneath the quiz introduction, there are two buttons to choose from. A 'Rules' button and a 'Start Quiz' button. If the user clicks the 'Rules' button, the quiz introduction text is replaced by a set of rules, and only the 'Start Quiz' button remains.  If the user clicks the 'Start Button', the quiz introduction and the two buttons disappear, and are replaced with the Quiz Page.
 
-![Navigation bar image](assets/readmeimages/homepage.PNG)
+![Homepage image](assets/readmeimages/homepage.PNG)
 
 [Back to top](<#contents>)
 
 ## Rules Page
 
-If the user is unsure of how to play a quiz game, at the bottom of the Home Page they can select the 'Rules' button which will show them a set of simple instructions. At the bottom of the Rules, or on the original Home Page if the user does not feel it is necessary to review the rules, there is a second button option to 'Start' the game.  
+If the user is unsure of how to play a quiz game, at the bottom of the Home Page they can select the 'Rules' button which will show them a set of simple instructions. Under the rules there is a button option to 'Start' the game.  
 
-![Navigation bar image](assets/readmeimages/rules.PNG)
+![Rules Page image](assets/readmeimages/rules.PNG)
 
 [Back to top](<#contents>)
 
 ## Quiz Page
 
-On the home page, I have written a brief introduction to the Andalucia region and included an inviting photo to encourage the user to read on. 
+Once the user has selected the 'Start Quiz' button from either the Home page or Rules Page, the introduction, rules, logo and buttons disappear. The quiz area then becomes visible to the user and the game can begin. 
+
+At the top of the quiz area, the user is told which question they are on out of a total of 12 questions. Each time the quiz is played, a new random selection of questions will be drawn from the questions array.
+
+Next, an image is displayed which changes according to the particular question drawn. Under the image, the user can read the quiz question and three possible answers displayed in clickable buttons. Finally the user can see their score throughout the quiz. 
+
+Once an answer has been selected, depending on which button is pressed, various things may or may not occur. If the user selects the correct answer, the selected button will turn green to tell the user that it's correct, the score will go up by 10 points, and a 'Next' button will appear to move on to the next question. If however the user selects an incorrect answer, the selected button will turn red, the correct answer will turn green to show which button the user should have chosen, the score does not change, and the 'Next' button will appear to move on to the next question. 
 
 
-![Welcome Section Image](assets/readmeimages/quizpage.PNG)
+![Quiz Page Image](assets/readmeimages/quizpage.PNG)
+
+![Correct Answer Image](assets/readmeimages/correctanswer.PNG)
+
+![Incorrect Answer Image](assets/readmeimages/incorrectanswer.PNG)
 
 [Back to top](<#contents>)
 
 ## End Page
 
-On the home page, I have written a brief introduction to the Andalucia region and included an inviting photo to encourage the user to read on. 
+Once 12 questions have been answered, when the user clicks the 'Next' button the quiz is finished, the questions disappear and they are replaced by a summary of how well the user did. If they score more than 80 points, they will see an image of a very happy Sidekick and a message congratulating them on their score.
 
+![End Page High Score Image](assets/readmeimages/highscore-endpage.PNG)
 
-![Welcome Section Image](assets/readmeimages/welcome.PNG)
+if the player gets 80 points or lower, they will see an image of Aladdin's magic carpet looking very sad and receive a message of comiseration.
 
-[Back to top](<#contents>)
+![End Page Low Score Image](assets/readmeimages/lowscore-endpage.PNG)
 
-
-## Footer
-    
-The footer contains two elements. 
-1.	Telephone and Email details to get in touch if the user wants further information. I used Font Awesome icons for the telephone and email icon here.
-2.	Social Media links to Facebook, Instagram, and Twitter. I have also used the Font Awesome icons here instead of just writing the names. Each social media icon links out into a new page and takes the user to the log-in page of the desired social media site. If this was a real site and I had real social media accounts setup, I would direct the users into my own Love Andalucia account. 
-The footer is designed using the same colour palette as the navigation bar to give the page symmetry and balance between the top and the bottom features. 
-
-    
-![Footer image](assets/readmeimages/footer.PNG)
-
-[Back to top](<#contents>)
+In both cases, the user has two button options for how to continue from this screen. They can select 'Play Again' which will reset the quiz, select a new set of question, set their score back to zero and present them with a new question. Or they can select 'Home' which will take them back to the Home Page.
 
 
 [Back to top](<#contents>)
 
 ## Future Features 
 
-In the future, I would like to add more pages to the Love Andalucia website. These could include information pertaining to:
+In the future, I would like to add more features to the Disney Sidekicks Quiz. These could include:
 
-* Dancing in Andalucia and the famous cultural style of Flamenco
-* Gallery
-* Agriculture
-
-If the Love Andalucia website is successful, I would like to use the ‘Love’ theme to branch out and create pages for all the 17 autonomous communities in Spain. For example, Love Valencia, Love La Rioja, Love Cantabria and so on. 
-I would also need to keep the events page up to date and add new popular events when necessary. 
+* A time limit for each question to add an element of speed and excitement
+* Add more questions to the questions array. 
 
 
 [Back to top](<#contents>)
@@ -156,11 +152,12 @@ I would also need to keep the events page up to date and add new popular events 
 
 I used the following technologies to create this website:
 
-* HTML5 – content and structure
-* CSS - styling
-* Balsamiq – wireframe designs
-* Gitpod – website deployment
-* Github – website hosting
+* HTML5 – Content and structure
+* CSS - Styling
+* Javascript - Game functions
+* Balsamiq – Wireframe designs
+* Gitpod – Website deployment
+* Github – Website hosting
 
 
 [Back to top](<#contents>)
@@ -180,16 +177,16 @@ The site was deployed to GitHub pages. The steps to deploy a site are as follows
   3. Under **Source**, select the branch to **master**, then click **save**.
   4. Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate a successful deployment.
 
-![Deploy image](assets/readmeimages/deploy.png)
+![Deploy image](assets/readmeimages/deploypage.PNG)
 
-  The live link to the Github repository can be found here - https://quiltingcode.github.io/loveandalucia/
+  The live link to the Github repository can be found here - https://quiltingcode.github.io/disneysidekicks/
 
 ### **To fork the repository using GitHub**
 A copy of the GitHub Repository can be made by forking the GitHub account. This copy can be viewed and changes can be made to the copy without affecting the original repository. Take the following steps to fork the repository:
-1. Log in to **GitHub** and locate the [repository](https://github.com/quiltingcode/loveandalucia).
+1. Log in to **GitHub** and locate the [repository](https://github.com/quiltingcode/disneysidekicks).
 2. On the right hand side of the page inline with the repository name is a button called **'Fork'**, click on the button to create a copy of the original repository in your GitHub Account.
 
-![GitHub fork image](assets/readmeimages/fork.png)
+![GitHub fork image](assets/readmeimages/fork.PNG)
 
 ### **To create a local clone of this project**
 The method from cloning a project from GitHub is below:
@@ -197,7 +194,7 @@ The method from cloning a project from GitHub is below:
 1. Under the repository’s name, click on the **code** tab.
 2. In the **Clone with HTTPS** section, click on the clipboard icon to copy the given URL.
 
-![Cloning image](assets/readmeimages/clone.png)
+![Cloning image](assets/readmeimages/clone.PNG)
 
 3. In your IDE of choice, open **Git Bash**.
 4. Change the current working directory to the location where you want the cloned directory to be made.
