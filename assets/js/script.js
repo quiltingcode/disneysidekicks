@@ -3,10 +3,10 @@
 const startButton = document.getElementById("start-button"); 
 const rulesButton = document.getElementById("rules-button"); 
 const nextButton = document.getElementById("next-button");
-const playAgainButton = document.getElementById("play-again-btn");
-const introArea = document.getElementById("intro-area");
-const questionArea = document.getElementById("question-area");
-const endOfGameArea = document.getElementById("end-of-game");
+let playAgainButton = document.getElementById("play-again-btn");
+let introArea = document.getElementById("intro-area");
+let questionArea = document.getElementById("question-area");
+let endOfGameArea = document.getElementById("end-of-game");
 let questionTitle = document.getElementById("question-title");
 let questionElement = document.getElementById("question");
 let answerButtons = document.getElementsByClassName("answer-btn");
@@ -18,7 +18,6 @@ let questionImg = document.getElementById("question-img");
 let endImg = document.getElementById("end-img");
 let shuffledQuestions = [];
 let currentQuestionIndex = [];
-let currentQuestion = {};
 let score = 0;
 let scoreText = document.getElementById("score");
 let questionCounter = 0;
@@ -47,7 +46,7 @@ function rules() {
             <li>Click to select one of three possible answers</li>
             <li>You will earn 10 points for each correct answer</li>
             <li>After each question, click next to continue</li>
-        </ol>`
+        </ol>`;
         rulesButton.classList.add('hide');
 }
 
@@ -69,20 +68,19 @@ function shuffle() {
     shuffledQuestions = questions.sort(function () {
         return Math.random() - 0.5;
       });
-   displayQuestion(shuffledQuestions[currentQuestionIndex])
+   displayQuestion(shuffledQuestions[currentQuestionIndex]);
    console.log("Shuffled");
    
 }
 
 function displayQuestion(currentQuestion) {
     questionElement.innerText = currentQuestion.question;
-    for (i of questions) {
-        answerOne.innerText = currentQuestion.answer1;
-        answerTwo.innerText = currentQuestion.answer2;
-        answerThree.innerText = currentQuestion.answer3;
-        questionImg.setAttribute('src', "assets/images/" + currentQuestion.img);
+    answerOne.innerText = currentQuestion.answer1;
+    answerTwo.innerText = currentQuestion.answer2;
+    answerThree.innerText = currentQuestion.answer3;
+    questionImg.setAttribute('src', "assets/images/" + currentQuestion.img);
         
-    }
+    
 
     answerOne.addEventListener('click', checkAnswer);
     answerTwo.addEventListener('click', checkAnswer);
@@ -99,7 +97,7 @@ function checkAnswer() {
             incrementScore(scorePoints);
         } else {
             this.classList.add('btn-wrong');
-            console.log("Wrong!")
+            console.log("Wrong!");
             for (let i = 0; i < answerButtons.length; i++) {
                 if (answerButtons[i].innerHTML === questions[0].correct) {
                     answerButtons[i].classList.add('btn-correct'); 
@@ -147,7 +145,7 @@ function nextQuestion() {
 }
 
 function endGame() {
-    console.log("Calculating total score...")
+    console.log("Calculating total score...");
     questionArea.classList.add('hide');
     endOfGameArea.classList.remove('hide');
     finalScore = correctAnswerCounter * scorePoints;
@@ -420,4 +418,4 @@ let questions = [
         correct: "Piglet",
         img: "pooh.png"   
     },
-]
+];
