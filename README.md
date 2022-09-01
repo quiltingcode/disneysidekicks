@@ -17,6 +17,7 @@ Welcome to <a href="https://quiltingcode.github.io/disneysidekicks/" target="_bl
     *  [Colour Scheme](<#colour-scheme>)
 * [**Current Features**](<#current-features>)
     * [**Home Page**](<#home-page>)
+    * [**Rules Page**](<#rules-page>)
     * [**Quiz Page**](<#quiz-page>)
     * [**End Page**](<#end-page>)
 * [**Future Features**](<#future-features>)
@@ -89,10 +90,17 @@ In the end, I kept the 'Cinderella' blue and changed the background for a Disney
   
 ## Home Page
 
-At the top of the website, on all pages, is the main title of the website and the navigation bar underneath. This makes it easy to navigate back to the homepage or to the three other pages of the website easily from any page. The nav bar introduces the colour palette to the user and indicates which page you are currently browsing, by underlining the current page.
-The title header can also be clicked on as a navigation tool back to the home page.
+At the top of the website is the main title and an introduction to the quiz. The game logo is displayed here, and I've also used the same image for the site's Favicon in the browser. This image shows the most famous of all the Disney characters, Mickey Mouse, and his  trusty sidekick, Pluto.  Underneath the quiz introduction, there are two buttons to choose from. A 'Rules' button and a 'Start Quiz' button. If the user clicks the 'Rules' button, the quiz introduction text is replaced by a set of rules, and only the 'Start Quiz' button remains.  If the user clicks the 'Start Button', the quiz introduction and the two buttons disappear, and are replaced with the Quiz Page.
 
-![Navigation bar image](assets/readmeimages/nav.PNG)
+![Navigation bar image](assets/readmeimages/homepage.PNG)
+
+[Back to top](<#contents>)
+
+## Rules Page
+
+If the user is unsure of how to play a quiz game, at the bottom of the Home Page they can select the 'Rules' button which will show them a set of simple instructions. At the bottom of the Rules, or on the original Home Page if the user does not feel it is necessary to review the rules, there is a second button option to 'Start' the game.  
+
+![Navigation bar image](assets/readmeimages/rules.PNG)
 
 [Back to top](<#contents>)
 
@@ -101,7 +109,7 @@ The title header can also be clicked on as a navigation tool back to the home pa
 On the home page, I have written a brief introduction to the Andalucia region and included an inviting photo to encourage the user to read on. 
 
 
-![Welcome Section Image](assets/readmeimages/welcome.PNG)
+![Welcome Section Image](assets/readmeimages/quizpage.PNG)
 
 [Back to top](<#contents>)
 
