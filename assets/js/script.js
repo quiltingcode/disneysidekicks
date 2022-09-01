@@ -80,8 +80,6 @@ function displayQuestion(currentQuestion) {
     answerThree.innerText = currentQuestion.answer3;
     questionImg.setAttribute('src', "assets/images/" + currentQuestion.img);
         
-    
-
     answerOne.addEventListener('click', checkAnswer);
     answerTwo.addEventListener('click', checkAnswer);
     answerThree.addEventListener('click', checkAnswer);

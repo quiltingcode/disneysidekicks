@@ -21,11 +21,13 @@ The Disney Sidekicks site has been passed through the [W3C html Validator](https
 
 ## JS Hint Validation Results
 
-* 
+* Script.js - 2 warnings, 1 undefined variable and 1 unused variable found.  Details can be found in the [Bugs](<#known-bugs>) section. The issues were fixed and after further testing, no more errors were returned.
+
+![JSHint validation test pass results](assets/readmeimages/jshint-pass.PNG)
 
 ## Responsiveness Test
 
-The responsive design tests were carried out manually throughout the build using Google Chrome Dev Tools. I used a mobile first approach basing my initial design around the iPhone SE (375 x 667px) which became my first media query break point. I then selected two more break points; 820px and above for tablets using the Dev Tools iPad Air mode to test my code, and then 1200px and above for desktops.
+The responsive design tests were carried out manually throughout the build using Google Chrome Dev Tools. I used a mobile first approach basing my initial design around the iPhone SE (375 x 667px) which became my first media query break point. I then selected one more break point at 768px and above for larger devices. 
 
 During the testing process I also used the [Responsive Design Checker](https://www.responsivedesignchecker.com/) website to simulate the website on several other devices. Here are my findings:
 
@@ -33,42 +35,36 @@ During the testing process I also used the [Responsive Design Checker](https://w
 
 ||<p>iPhone 6/7 plus</p><p>414 x 736</p>|<p>Samsung Galaxy S5/6/7</p><p>360 x 640</p>|<p>Google Pixel/Nexus 5/6</p><p>411 x 731</p>|
 | :- | :-: | :-: | :-: |
-|Render|Pass |Pass (2nd Time)|Pass|
-|Images|Pass|Pass (2nd Time)|Pass|
+|Render|Pass |Pass|Pass|
+|Images|Pass|Pass|Pass|
 |Links|Pass|Pass|Pass|
 
 I chose not to test the iPhone models 3, 4, or 5 as these have a smaller screen (320 x 480) and were only supported officially by Apple until March 2021. 
 
-On devices with a width of 360 pixels, the navigation bar did not all fit on one line, and the events link drops down onto a second line. I adjusted the margin, and this bug has now been fixed. 
-
-On the form.html page, the beach background image was taking longer to render than other photos on the site. I compressed the image using <https://tinypng.com/> which reduced the size of the file down and now it renders much quicker. 
+On devices with a height of 640 pixels, such as the Samsung mobile devices, once the quiz has begun, you have to scroll down after choosing an answer to see the bottom of the question container in some cases where the question is longer. The next button sometimes is slightly hidden, but I find this scrolling acceptable in the case of certain longer questions for shorter devices. 
 
 ### Tablet Devices
 
 ||<p>Amazon Kindle Fire</p><p>768 x 1024</p>|<p>Samsung Galaxy Tab 10</p><p>800 x 1280</p>|<p>Apple iPad Pro</p><p>1366 x 1024</p><p></p>|
 | :- | :-: | :-: | :-: |
-|Render|Pass|Pass|Pass |
-|Images|Pass (2nd Time)|Pass|Pass|
+|Render|Pass|Fail|Pass |
+|Images|Pass|Pass|Pass|
 |Links|Pass|Pass|Pass|
 
-Testing with the Amazon Kindle Fire, (and occurring on the iPad Mini), the background form image is not big enough to cover the full main section and leaves a large gap between the image and the footer. I increased the size of the form section height by 50px which has resolved the issue and still looks OK on mobile devices as well. 
+When I tested the form page on the Samsung Galaxy 
 
-On the responsive design checker website, testing the Kindle Fire, I also noticed a contrast between the colour of the header and the body which does not appear when testing in Chrome Dev Tools. I checked the styling of the header, and it was specifically styled white whereas the body has no background colour applied. As I want all the background to be white, I chose to remove the header background colour styling and use the default. Now the background colours look the same in both sections when testing in Responsive Design Checker. 
+![tablet device view of quiz](assets/readmeimages/samsung-tablet-testing.PNG)
 
-When I tested the form page on the Samsung Galaxy the same issue occurred as with the Kindle. The background image does not reach down far enough to fill the gap between the form and the footer, and leaves a big white space. 
+On the larger Apple iPad Pro, the rules text appears very small in comparison with the relative screen size. I have therefore decided to create a third media query break point at 1200px to make the font bigger for wider screens.
 
-![tablet device view of form page](assets/readmeimages/tablettestingform.PNG)
 
-As I have set my break point at 820, the media query which increases the height of the form to 900px doesn’t affect these tablet devices which are only 800px in height. 
-
-I therefore decided at this point to change my tablet media query break point to 800px and then changed the height of the form section for devices 800px or more to be 80% of the viewport height. This reduces the gap significantly and just drops the social network icons below the initial viewport if you don’t scroll. I find this to be an acceptable compromise. 
 
 ### Desktop Devices
 
 ||<p>24 “ Desktop</p><p>1920 x 1200</p>|<p>19” Desktop</p><p>1440 x 900</p>|<p>10” Notebook</p><p>1024 x 600</p>|
 | :- | :-: | :-: | :-: |
 |Render|Pass|Pass|Pass|
-|Images|Pass (2nd Time)|Pass|Pass|
+|Images|Pass|Pass|Pass|
 |Links|Pass|Pass|Pass|
 
 On wide display devices the images of the site are restricted in width to 820px. This helps the UX by not spreading the content too wide on the extra wide screens.
@@ -113,16 +109,23 @@ In the Firefox and Edge browsers, two of the photos in the Places page do not lo
 
 7. As a result of the W3C html validation test, the index.html page had 1 error. 
 
-![home page html validation errors](assets/readmeimages/w3-validator-error.PNG)
+![Index.html validation error](assets/readmeimages/w3-validator-error.PNG)
 
-This error says that I have used an <a></a> tag within a button element for my link back to the home page from the end page, but according to the W3 Validator this is not allowed. 
+This error says that I have used an <a></a> tag within a button element for my link back to the home page from the end page, but according to the W3 Validator this is not allowed.  
 
+8. As a result of the JS Hint validation test, 2 warnings, 1 undefined variable and 1 unused variable were found.
 
-9. As a result of the W3C CSS validation test, 1 error was found.
+![JSHint validation test results](assets/readmeimages/jshinterrors.PNG)
 
-![CSS validation test results](assets/readmeimages/cssvalidationerror.PNG)
+Initially, 45 warnings were found, but when I asked the question in the Slack forum as to why I had so many " 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)." errors, I was informed that this was simply a case of changing the JS Hint configuration to include New JavaScript Features (ES6) which were not previously included.
 
-I corrected this spacing issue in the typing of 1rem and re-run the CSS code through the validator. The second time, no errors were returned. 
+Having changed the configuration I was left with 2 warnings:
+ * A missing semi-colon
+ * A missing let variable inside a for loop
+
+The undefined 'i' variable that I had created was inside a loop to retrieve the 3 possible answer objects from the questions array. However, it turns out that a loop was not necessary and therefore the variable was not doing anything. I removed the loop function and left the three answers and question image as separate commands within the displayQuestion function , and after testing the game again, the questions, answers and image are all still retrieved correctly. 
+
+This left me with a simple issue of a global variable which I created initally, but never included it in my functions in the end. I deleted this variable and re-ran the full length of code through the validator. 
 
 ### Unresolved
 
