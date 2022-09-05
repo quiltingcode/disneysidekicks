@@ -1,8 +1,8 @@
 // List of variables created for the game
 
-const startButton = document.getElementById("start-button"); 
-const rulesButton = document.getElementById("rules-button"); 
-const nextButton = document.getElementById("next-button");
+let startButton = document.getElementById("start-button"); 
+let rulesButton = document.getElementById("rules-button"); 
+let nextButton = document.getElementById("next-button");
 let playAgainButton = document.getElementById("play-again-btn");
 let introArea = document.getElementById("intro-area");
 let questionArea = document.getElementById("question-area");
@@ -25,18 +25,39 @@ let finalScore = document.getElementById("final-score");
 let finalScoreText = document.getElementById("final-score-text");
 let correctAnswerCounter = 0;
 
+/* Fixed Variables which define the points per correct question
+ * and the maximum number of questions asked in one quiz game
+*/
+
 const scorePoints = 10;
 const maxQuestion = 12;
 
-startButton.addEventListener('click', runGame);
+/* Set Timer variables and set countdown interval to
+ * one second
+*/
+
+setInterval(countdown, 1000);
+let timeleft = 15;
+let timer = document.getElementById("timer");
+let counter = 0;
 
 /**
- * When the Start Button is clicked, the game area changes.
+ * If the Start Button is clicked, the game area changes.
  * The start quiz intro and start button are removed, 
  * and the display question function is called.
  */
 
+startButton.addEventListener('click', runGame);
+
+/**
+ * If the Rules Button is clicked, the game area changes.
+ * The start quiz intro and the game rules are displayed.
+ * The Start Quiz button is still available.
+ */
+
  rulesButton.addEventListener('click', rules);
+
+ /* HTML that is displayed when the Rules button is clicked */
 
 function rules() {
     introArea.innerHTML = 
@@ -50,8 +71,9 @@ function rules() {
         rulesButton.classList.add('hide');
 }
 
-function runGame() {
+function runGame(event) {
     console.log("Started");
+    event.preventDefault();
     startButton.classList.add('hide');
     rulesButton.classList.add('hide');
     introArea.classList.add('hide');
@@ -59,10 +81,17 @@ function runGame() {
     nextButton.classList.add('hide');
     logoImg.classList.add('hide');
     currentQuestionIndex = [0];
+    timer.innerHTML = (timeleft - counter);
     questionCounter++;
     questionTitle.innerText = `Question ${questionCounter} of ${maxQuestion}`;
     shuffle();
+    countdown();
 }
+
+/* Function to shuffle the quiz questions when the Start Quiz is
+ * clicked to create a different set of questions each time it is
+ * played.
+ */
 
 function shuffle() {
     shuffledQuestions = questions.sort(function () {
@@ -71,6 +100,14 @@ function shuffle() {
    displayQuestion(shuffledQuestions[currentQuestionIndex]);
    console.log("Shuffled");
    
+}
+
+function countdown() {
+    
+    console.log("counting down...");
+    counter++;
+    timer.innerHTML = (timeleft - counter);
+    
 }
 
 function displayQuestion(currentQuestion) {

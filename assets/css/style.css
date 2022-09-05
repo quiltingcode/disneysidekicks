@@ -40,8 +40,6 @@ body {
     font-size: 1.2rem;
 }
 
-
-
 /* QuizPage */
 
 /* Quiz Question Area */
@@ -81,6 +79,12 @@ h4 {
 
 #question-title {
     margin: 2%;
+}
+
+/* Timer Element */
+
+.timer-element {
+    position: left;
 }
 
 /* Answer Area */

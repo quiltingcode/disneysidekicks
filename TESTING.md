@@ -57,8 +57,6 @@ When I tested the form page on the Samsung Galaxy Tab 10, the background image w
 
 On the larger Apple iPad Pro, the rules text appears very small in comparison with the relative screen size. I have therefore decided to create a third media query break point at 1200px to make the font bigger for wider screens.
 
-
-
 ### Desktop Devices
 
 ||<p>24 “ Desktop</p><p>1920 x 1200</p>|<p>19” Desktop</p><p>1440 x 900</p>|<p>10” Notebook</p><p>1024 x 600</p>|
@@ -67,29 +65,22 @@ On the larger Apple iPad Pro, the rules text appears very small in comparison wi
 |Images|Pass|Pass|Pass|
 |Links|Pass|Pass|Pass|
 
-On wide display devices the images of the site are restricted in width to 820px. This helps the UX by not spreading the content too wide on the extra wide screens.
+Playing the quiz on the 10inch Notebook, the display appears odd because the dimensions are very wide but very short; shorter in fact that most mobile devices. Therefore, when this device is in use, more scrolling is required. You have to scroll down slightly in the 'Rules' screen to reach the 'Start Quiz' button which is only half visible, and then once the quiz has begun, you have to scroll down to see all the answer options at once which means to lose sight of the header whilst playing. I find this acceptable as once the quiz has begun and you have scrolled down to the game area, you don't have to scroll anymore whilst playing the game.
 
-The font-size on the 24 “ Desktop device appears very small. I decided to add another media query break point at 1400px and add styling to increase the font-size for these wide devices. Due to this I also had to increase the height of the category places div elements because the text was overflowing out. Now the text seems more proportionate to the size of the images. 
+![Notebook view of quiz pre-scroll](assets/readmeimages/beforescroll-notebook.PNG)
 
-On large devices the Love Andalucia header doesn’t stand out as much as on smaller devices and almost becomes overshadowed by the next h2 header. I have added a new media query for devices larger from 1400px to increase the font-size of the header. It looks more proportional now and stands out as it should.
-
-Looking at the events page on these very wide devices, the table could be made wider to use up more of the available width. Now that I have an additional break point created, I can style in this change. 
-
-On the form page, the form element overflows from the background container and almost goes into the footer. Within the 1400px media query, I changed the margins to keep the form within its image container. 
-
-When testing the form page on the 19” desktop, the height of the device is only 900px so again, I get the same issue whereby the form overflows out of the background container and over the footer. I have reduced the font-size of the form text to overcome this issue.
+![Notebook view of quiz post-scroll](assets/readmeimages/afterscroll-notebook.PNG)
 
 ## Browser Compatibility 
 
-Love Andalucia was tested on the following browsers:
+Disney Sidekicks was tested on the following browsers:
 
 - Google Chrome
 - Microsoft Edge
 - Mozilla Firefox
 
 I do not have any Apple devices available to carry out testing on a Safari browser. Appearance and functionality appear to be consistent throughout all browsers.
-
-In the Firefox and Edge browsers, two of the photos in the Places page do not load. I do, however, see a description of the photo from the alt text in the code. I compressed the two files using and  <https://tinypng.com/>. I also renamed all the image files to be simpler with no spaces, and reviewed the file paths of all the photos across the site. Images now load correctly.  
+  
 
 ## Known Bugs
 
