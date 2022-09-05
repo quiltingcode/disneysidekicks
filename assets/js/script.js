@@ -36,8 +36,8 @@ const maxQuestion = 12;
  * one second
 */
 
-setInterval(countdown, 1000);
-let timeleft = 15;
+
+let timeleft = 30;
 let timer = document.getElementById("timer");
 let counter = 0;
 
@@ -71,9 +71,8 @@ function rules() {
         rulesButton.classList.add('hide');
 }
 
-function runGame(event) {
+function runGame() {
     console.log("Started");
-    event.preventDefault();
     startButton.classList.add('hide');
     rulesButton.classList.add('hide');
     introArea.classList.add('hide');
@@ -81,11 +80,29 @@ function runGame(event) {
     nextButton.classList.add('hide');
     logoImg.classList.add('hide');
     currentQuestionIndex = [0];
-    timer.innerHTML = (timeleft - counter);
+    timer.innerHTML = timeleft;
     questionCounter++;
     questionTitle.innerText = `Question ${questionCounter} of ${maxQuestion}`;
     shuffle();
     countdown();
+}
+
+/* Function to show the quiz question and three possible answers
+ * in the question area of the page. Question image also 
+ * displayed.
+ */
+
+function displayQuestion(currentQuestion) {
+    questionElement.innerText = currentQuestion.question;
+    answerOne.innerText = currentQuestion.answer1;
+    answerTwo.innerText = currentQuestion.answer2;
+    answerThree.innerText = currentQuestion.answer3;
+    questionImg.setAttribute('src', "assets/images/" + currentQuestion.img);
+        
+    answerOne.addEventListener('click', checkAnswer);
+    answerTwo.addEventListener('click', checkAnswer);
+    answerThree.addEventListener('click', checkAnswer);
+
 }
 
 /* Function to shuffle the quiz questions when the Start Quiz is
@@ -99,28 +116,42 @@ function shuffle() {
       });
    displayQuestion(shuffledQuestions[currentQuestionIndex]);
    console.log("Shuffled");
-   
 }
+
+/* Function to add timer element to the quiz. Counts down from 
+ * 15 to 0. If times runs out, timeout function called.
+ */
 
 function countdown() {
-    
     console.log("counting down...");
+    setInterval(countdown, 1000);
     counter++;
     timer.innerHTML = (timeleft - counter);
-    
+    if (counter === timeleft) {
+        timeout();
+        return;
+    }
 }
 
-function displayQuestion(currentQuestion) {
-    questionElement.innerText = currentQuestion.question;
-    answerOne.innerText = currentQuestion.answer1;
-    answerTwo.innerText = currentQuestion.answer2;
-    answerThree.innerText = currentQuestion.answer3;
-    questionImg.setAttribute('src', "assets/images/" + currentQuestion.img);
-        
-    answerOne.addEventListener('click', checkAnswer);
-    answerTwo.addEventListener('click', checkAnswer);
-    answerThree.addEventListener('click', checkAnswer);
+/* Function to default wrong answer if timer reaches 0 
+ * 
+ */
 
+function timeout() {
+    console.log("Time has run out")
+    counter = 0
+    for (let i = 0; i < answerButtons.length; i++) {
+        if (answerButtons[i].innerHTML === questions[0].correct) {
+            answerButtons[i].classList.add('btn-correct'); 
+        } else if (answerButtons[i].innerHTML !== questions[0].correct) {
+            answerButtons[i].classList.add('btn-wrong');
+        }
+    } 
+    nextButton.classList.remove('hide');
+   
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].removeEventListener('click', checkAnswer);
+    }
 }
 
 function checkAnswer() {
@@ -169,6 +200,7 @@ function nextQuestion() {
         answerButtons[i].classList.remove('btn-wrong');
     }
     questions.splice(0, 1);
+    counter = 0;
     if (questionCounter === 12) {
         nextButton.classList.remove('hide');
         nextButton.innerText = 'End';
