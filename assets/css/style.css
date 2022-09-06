@@ -84,10 +84,11 @@ h4 {
 /* Timer Element */
 
 .timer-element {
-    position: left;
-    background-color: red;
-    width: 35px;
-    height: 35px;
+    margin-left: 32px;
+    background-color: white;
+    color: black;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     /* border: 1px solid black; */
 }

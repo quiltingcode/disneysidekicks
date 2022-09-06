@@ -107,12 +107,14 @@ I have now added a background colour of 'white' to all the buttons to maintain c
 
 8. The images were taking a long time to load, and this was not giving a nice user experience when the questions and answers are all available on screen and the timer counting down but the logo not yet fully loaded. I decided to compress all the quiz images using tinypng.com and this helped a lot to reduce load time. 
 
-9. As a result of the W3C html validation test, the index.html page had 1 error. 
+9. 
+
+10. As a result of the W3C html validation test, the index.html page had 1 error. 
 
 ![Index.html validation error](assets/readmeimages/w3-validator-error.PNG)
 
 This error says that I have used an <a></a> tag within a button element for my link back to the home page from the end page, but according to the W3 Validator this is not allowed.  
-10. As a result of the JS Hint validation test, 2 warnings, 1 undefined variable and 1 unused variable were found.
+11. As a result of the JS Hint validation test, 2 warnings, 1 undefined variable and 1 unused variable were found.
 
 ![JSHint validation test results](assets/readmeimages/jshinterrors.PNG)
 

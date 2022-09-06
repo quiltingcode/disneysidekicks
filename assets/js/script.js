@@ -82,6 +82,7 @@ function rules() {
     `<h3>Rules</h3>
         <ol id=rules>
             <li>There are 12 questions</li>
+            <li>You have 15 seconds to answer each question</li>
             <li>Click to select one of three possible answers</li>
             <li>You will earn 10 points for each correct answer</li>
             <li>After each question, click next to continue</li>
