@@ -37,9 +37,11 @@ const maxQuestion = 12;
 */
 
 
-let timeleft = 30;
+let timeleft = 16;
 let timer = document.getElementById("timer");
 let counter = 0;
+let myInterval;
+
 
 /**
  * If the Start Button is clicked, the game area changes.
@@ -47,7 +49,12 @@ let counter = 0;
  * and the display question function is called.
  */
 
-startButton.addEventListener('click', runGame);
+ startButton.addEventListener("click", function() {
+    runGame();
+    myInterval = setInterval(countdown, 1000);
+  });
+
+
 
 /**
  * If the Rules Button is clicked, the game area changes.
@@ -124,12 +131,11 @@ function shuffle() {
 
 function countdown() {
     console.log("counting down...");
-    setInterval(countdown, 1000);
     counter++;
     timer.innerHTML = (timeleft - counter);
     if (counter === timeleft) {
         timeout();
-        return;
+        clearInterval(myInterval);
     }
 }
 

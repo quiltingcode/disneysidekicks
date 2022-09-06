@@ -85,6 +85,11 @@ h4 {
 
 .timer-element {
     position: left;
+    background-color: red;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    /* border: 1px solid black; */
 }
 
 /* Answer Area */
