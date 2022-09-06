@@ -42,6 +42,7 @@ let timer = document.getElementById("timer");
 let counter = 0;
 let myInterval;
 
+/* Event Listeners */
 
 /**
  * If the Start Button is clicked, the game area changes.
@@ -49,12 +50,22 @@ let myInterval;
  * and the display question function is called.
  */
 
- startButton.addEventListener("click", function() {
+startButton.addEventListener("click", function() {
     runGame();
     myInterval = setInterval(countdown, 1000);
   });
 
+/**
+ * If the Next Button is clicked, the game area is reset.
+ * The next question function is called, which loads a  
+ * new question and resets the timer.
+ */
 
+
+nextButton.addEventListener('click', function() {
+    nextQuestion();
+    myInterval = setInterval(countdown, 1000);
+  });
 
 /**
  * If the Rules Button is clicked, the game area changes.
@@ -162,6 +173,7 @@ function timeout() {
 
 function checkAnswer() {
     console.log('Checking answer');
+    clearInterval(myInterval);
     console.log(questions[0].correct);
         if(this.innerHTML === questions[0].correct) {
             this.classList.add('btn-correct');  
@@ -197,7 +209,11 @@ function checkAnswer() {
     return;
 }
 
-nextButton.addEventListener('click', nextQuestion);
+/**
+ * When the Next button is clicked, the nextQuestion function is called, which loads the next question 
+ * and resets the answer buttons and the timer. It also removes the current question from the array, so
+ * that it can't be recalled again within the same quiz during the shuffle function.
+*/
 
 function nextQuestion() {  
     console.log("Generating next question...");
@@ -216,6 +232,12 @@ function nextQuestion() {
     }
     
 }
+
+/**
+ * Once 12 questions have been played, the endGame function is called. 
+ * This shows the user their final score and shows them a happy image or a sad image depending on how many
+ * answer they got correct.
+*/
 
 function endGame() {
     console.log("Calculating total score...");
