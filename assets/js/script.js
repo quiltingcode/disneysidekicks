@@ -75,6 +75,13 @@ nextButton.addEventListener('click', function() {
 
  rulesButton.addEventListener('click', rules);
 
+ /**
+ * If the Play Again Button is clicked, the quiz starts again from question 1 with a new set of shuffled questions.
+ * The game parameters are reset when the resetGame function is called on this click event.
+ */
+
+ playAgainButton.addEventListener('click', resetGame);
+
  /* HTML that is displayed when the Rules button is clicked */
 
 function rules() {
@@ -89,6 +96,12 @@ function rules() {
         </ol>`;
         rulesButton.classList.add('hide');
 }
+
+/**
+ * If the Start Quiz is clicked, the game area changes. The quiz home page disappears and the game
+ * area appears. The quiz questions array is shuffled and the first question is called.
+ * The question counter begins to show the progress of the game.
+ */
 
 function runGame() {
     console.log("Started");
@@ -152,8 +165,9 @@ function countdown() {
 }
 
 /* Function to default wrong answer if timer reaches 0 
- * 
- */
+ * The correct answer is highlighted green and the two wrong answers in red. The score does not increment.
+ * The next button is displayed to allow the user to move onto the next question.
+ */ 
 
 function timeout() {
     console.log("Time has run out")
@@ -171,6 +185,13 @@ function timeout() {
         answerButtons[i].removeEventListener('click', checkAnswer);
     }
 }
+
+/* Function to review the user selection once an answer button has been selected. 
+ * This functions checks whether the user selection matches the correct answer from the questions array, and 
+ * highlights the button in green if its correct, or red if it's wrong. In the case of a wrong answer, the correct
+ * answer is also highlighted in green for user information.
+ * The next button is then displayed for the user to move onto the next question in the quiz.
+ */ 
 
 function checkAnswer() {
     console.log('Checking answer');
@@ -197,7 +218,7 @@ function checkAnswer() {
 }
 
 /**
- * Gets the current score from the DOM and increments it by 1
+ * Checks the current score and increments it by 1, in the case of a correct answer.
  */
  
  function incrementScore() {
@@ -237,7 +258,7 @@ function nextQuestion() {
 /**
  * Once 12 questions have been played, the endGame function is called. 
  * This shows the user their final score and shows them a happy image or a sad image depending on how many
- * answer they got correct.
+ * answers they got correct.
 */
 
 function endGame() {
@@ -254,7 +275,12 @@ function endGame() {
 
 }
 
-playAgainButton.addEventListener('click', resetGame);
+/**
+ * Once the Play Again button is pressed, the resetGame function is called.  
+ * This resets the score back to 0, and resets the correct answer counter as well in the console.
+ * This resets the colours of the answer buttons back to white and lets the user start a brand new quiz with a 
+ * new set of shuffled questions.
+*/
 
 function resetGame() { 
     console.log("Resetting game features");
