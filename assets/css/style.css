@@ -141,6 +141,7 @@ h4 {
     border: 2px solid darkcyan;
     border-radius: 5px;
     margin: 10px;
+    background-color: white;
 }
 
 .btn:hover {

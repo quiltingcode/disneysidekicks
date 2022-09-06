@@ -241,6 +241,7 @@ function nextQuestion() {
 
 function endGame() {
     console.log("Calculating total score...");
+    clearInterval(myInterval);
     questionArea.classList.add('hide');
     endOfGameArea.classList.remove('hide');
     finalScore = correctAnswerCounter * scorePoints;
