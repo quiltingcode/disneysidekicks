@@ -80,31 +80,39 @@ Disney Sidekicks was tested on the following browsers:
 - Mozilla Firefox
 
 I do not have any Apple devices available to carry out testing on a Safari browser. Appearance and functionality appear to be consistent throughout all browsers.
-  
+
+When I tested the quiz game using Mozilla Firefox, I noticed on the final End Page screen, that the two buttons were slightly different colours. This is because the styling on the buttons are all using the default background colour, but the home anchor tag has a specified background colour of 'white'. 
+
+![Firefox Button colours](assets/readmeimages/end-buttons.PNG)
+
+I have now added a background colour of 'white' to all the buttons to maintain continuity throughout the game.  
 
 ## Known Bugs
 
 ### Resolved
 
-1. Navigation bar spilling over into a second line in smaller mobile devices. Nav > a selector margin changed from 1rem to 0.5rem.
+1. The .hide class elements have a display setting of 'none' but the #answer-area id element has a display setting of 'grid'. For this reason, due to the rules of specificity, the answer-area container would not hide itself when called by the javascript. I had to change the id of answer-area to a class, and I moved the hide styling below the grid styling. This resolved the issue, and now all items hide correctly when called by the Javascript.
 
-2. Home page text box disappearing off the right-hand side of the screen. Used up a 90-minute tutor session to get advice on my screen alignment in general and the tutor suggested the google map code I had inserted below (which comes with all its own styling embedded) was causing the overall width of my screen to be wider and therefore other elements were stretching to the right as well. I deleted the google maps insert and removed all the width styling on the page. This re-centred all the homepage elements correctly once again. I generated a new google map, but using a much smaller width parameter, and now there is no page overflow. 
+2. I am getting a console.log and screen read out in the answer buttons of 'Undefined' as the javascript can't find the three answer options and place their text into the three corresponding buttons on screen. I really struggled with this element of the Javascript, pin-pointing a text value within an object within an array. I went to Tutor Support and they helped me work through finding the correct path, as well as suggesting I review the following [Stack Overflow](https://stackoverflow.com/questions/256754/how-to-pass-arguments-to-addeventlistener-listener-function ) article. In the end, I managed to find the correct syntax to locate the answer text desired.
 
-3. When I added a contact email and telephone number to the footer, I gave the email element an ID of #email and styled it accordingly. Later, when I was looking at the form page, I noticed that my email address input field had gone out of alignment. Using Chrome Dev Tools, it showed me that the styling for the contact footer email was also affecting the email address input field. I renamed the email ID to be more specific and the form email input field was no longer pushed to the right and out of alignment with the other fields. 
+3. The increment score function was incrementing the score each by by 3, instead of 1. I believe the cause of this was down to the score++ begin inside the loop to check the three answer boxes for the correct answer, and was therefore carrying out the increment score routine 3 times. I still couldn't really understand why this was happening, and when I used Google Dev Tools to review the console.log, it was logging 'checking answer' only once so it didn't appear to be triplicating the checkAnswer function three times, but within this function it was however logging 'correct' three times.  I asked for advice from the Slack Community on this issue, and they suggested what I suspected and agreed that I needed to change the method of looping through the answer buttons and listening for a click on the right answer, as this was causing the after effects to occur multiple times. I therefore removed the loop through the answer buttons and event listener, and instead created three separate event listeners; one for each answer button. In this way, once a correct or incorrect answer was selected, the 'correct' 'incorrect' function was only called once, and in the event of a correct selection, the score was only incremented by one. I since decided that each correct answer now receives 10 points and this works correctly using a fixed variable of scorePoints.
 
-4. I noticed that the footer was missing when I scrolled down through the Places page. All the other pages were OK though. Using Chrome Dev Tools to locate it, I realised it had travelled up the screen and was hidden underneath one of the images. I tried to look up reasons for this on the <https://stackoverflow.com/> website but, having tried various solutions such as sticky footer and absolute positioning, it would not move down. I scheduled a tutor session, and the tutor instructed my in the process of adding a <main> tag into all the pages and creating a flexbox system. This made no difference, but then the tutor noticed that I had a fixed height of 400px set on my destinations-box element and said this was causing the footer to sit up right below this 400px limit. The limit was removed, and the footer went back down into its place. I have also tried to use the rem unit of measurement wherever possible as opposed to px for better responsive design. 
+4. Due to the shuffle function, sometimes the same question would appear several times within the same quiz game, and this is not good for user experience. I therefore added a 'splice' method into the nextQuestion fucntion, so that each time a new question is called, the current question is removed from the array. The full array is shuffled when the 'Play Again' button is selected at the end and the resetGame function is called. 
 
-5. When I started researching how to make the images responsive to the device size as the photos would increase but not remain centred when moving up from mobile size to tablet size for example. I changed the styling to display the images as block elements with margin: auto and this solved the centring issue.
+5. When the game has been played twice, during the third game on question 7 there are no more questions left in the questions array, and an error occurs.  I need to add in a function once the game is reset to restore all the questions back into the array.
 
-6. I add font awesome icons next to the footer telephone number and email instead of writing the words, but the icons wouldn’t load in the browser. This was due to the version of the icons not being compatible with the browser, so I changed the fal version to the older fas version and these icons load correctly now. 
+6. I realised that during the checkAnswer function, the clicked answer button turned green if correct and red if incorrect.  However, if the user selects an incorrect answer, the game doesn't actually tell them which answer was the correct one. Therefore, I amended to function to also highlight the correct answer button in green even when a different button has been pressed. This adds to a better user experience overall. 
 
-7. As a result of the W3C html validation test, the index.html page had 1 error. 
+7. If you choose the 'Play Again' button, the score accumulated from the previous game. I added a line into the resetGame function to reset the correct answer counter back to 0 each time the game begins. 
+
+8. The images were taking a long time to load, and this was not giving a nice user experience when the questions and answers are all available on screen and the timer counting down but the logo not yet fully loaded. I decided to compress all the quiz images using tinypng.com and this helped a lot to reduce load time. 
+
+9. As a result of the W3C html validation test, the index.html page had 1 error. 
 
 ![Index.html validation error](assets/readmeimages/w3-validator-error.PNG)
 
 This error says that I have used an <a></a> tag within a button element for my link back to the home page from the end page, but according to the W3 Validator this is not allowed.  
-
-8. As a result of the JS Hint validation test, 2 warnings, 1 undefined variable and 1 unused variable were found.
+10. As a result of the JS Hint validation test, 2 warnings, 1 undefined variable and 1 unused variable were found.
 
 ![JSHint validation test results](assets/readmeimages/jshinterrors.PNG)
 
@@ -120,7 +128,9 @@ This left me with a simple issue of a global variable which I created initally, 
 
 ### Unresolved
 
-1. The form, on the face of it acts like you would expect it to, and acknowledges your data input, however the data doesn't actually push anywhere. This is a limitation within this project and would be rectified for a true deployment of the Love Andalucia site.
+1. The 'Next' button is supposed to appear after the final answer has been selected, but on this occasion read 'End'. This is not essential but it indicates more clearly to the player that this was the final question and the game is over. The progress of the game is still always visible to the user, through the question number counter above the image, but I thought this was a nice additional feature to have in place. I don't know why the innerHTML on this button does not change for this last question. 
+
+2. The background image moves with each click of a button. This distracts from the quiz and does not lead to a good user experience. 
 
 ## Additional Testing
 
@@ -135,12 +145,11 @@ I used the Lighthouse test within Google Chrome Dev Tools to test the following:
 
 The results were overall very positive:
 
-![Lighthouse report](assets/readmeimages/lighthouse.PNG)
+![Lighthouse report](assets/readmeimages/lighthouse.PNG
 
 ## Peer Review
 
-In addition to the above tests, I asked my peers to review this website and their overall response was very positive. 
-
-One person suggested that the list of events would be better in chronological order as the events occur through the year so I implemented this change. 
+In addition to the above tests, I asked my peers to play this quiz and their overall response was very positive. 
+ 
 
 Please click [**_here_**](README.md) to return to the Love Andalucia README file.
