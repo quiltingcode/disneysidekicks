@@ -148,8 +148,13 @@ In both cases, the user has two button options for how to continue from this scr
 
 In the future, I would like to add more features to the Disney Sidekicks Quiz. These could include:
 
-* A time limit for each question to add an element of speed and excitement
-* Add more questions to the questions array. 
+* Music-related questions with audio elements
+* Add more questions to the questions array as new Disney films are released. 
+* Eventually I could expand on my theme of Disney quizzes, and offer a list of categories for the player to choose from. For exmaple:
+  * Disney Villains
+  * Disney Princesses
+  * Disney Theme Tunes
+  * Disney quotes
 
 
 [Back to top](<#contents>)

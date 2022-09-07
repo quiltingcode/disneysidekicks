@@ -107,7 +107,7 @@ I have now added a background colour of 'white' to all the buttons to maintain c
 
 8. The images were taking a long time to load, and this was not giving a nice user experience when the questions and answers are all available on screen and the timer counting down but the logo not yet fully loaded. I decided to compress all the quiz images using tinypng.com and this helped a lot to reduce load time. 
 
-9. 
+9. When I created the countdown timer I used the setInterval method that I learnt in a [YouTube](https://www.youtube.com/watch?v=MLtAMg9_Svw) tutorial. This website was only a single page however, and didn't include any methods to start or stop the timer. I initially put the SetInterval command inside the countdown function, but this was causing the time to increase expontially every second as countdown was being called multiple times. But when I moved the setInterval out of the function it started the countdown as soon as the homepage was loaded and by the time the user clicked 'Start Quiz', the first question had already timed out. Tutor Support gave me the link to a helpful [W3Schools article](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) which explained how to change the syntax of an event listener to call multiple functions. I used this article to change the syntax of my 'Start Game' button and 'Next' button to both call a new question but also start the countdown. Tutor Support also sent me a link to another [W3Schools article](https://www.w3schools.com/jsref/met_win_clearinterval.asp) which taught me the clearInterval function to stop the countdown. 
 
 10. As a result of the W3C html validation test, the index.html page had 1 error. 
 
@@ -154,4 +154,4 @@ The results were overall very positive:
 In addition to the above tests, I asked my peers to play this quiz and their overall response was very positive. 
  
 
-Please click [**_here_**](README.md) to return to the Love Andalucia README file.
+Please click [**_here_**](README.md) to return to the Disney Sidekicks README file.
