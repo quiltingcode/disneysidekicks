@@ -1,23 +1,35 @@
 // List of variables created for the game
 
+ /* Buttons */
+
 let startButton = document.getElementById("start-button"); 
 let rulesButton = document.getElementById("rules-button"); 
 let nextButton = document.getElementById("next-button");
 let playAgainButton = document.getElementById("play-again-btn");
+let answerButtons = document.getElementsByClassName("answer-btn");
+let answerOne = document.getElementById("answer1");
+let answerTwo = document.getElementById("answer2");
+let answerThree = document.getElementById("answer3");
+
+/* Game Areas */
+
 let introArea = document.getElementById("intro-area");
 let questionArea = document.getElementById("question-area");
 let endOfGameArea = document.getElementById("end-of-game");
 let questionTitle = document.getElementById("question-title");
 let questionElement = document.getElementById("question");
-let answerButtons = document.getElementsByClassName("answer-btn");
-let answerOne = document.getElementById("answer1");
-let answerTwo = document.getElementById("answer2");
-let answerThree = document.getElementById("answer3");
+
+/* Quiz Question Variables */
+
 let logoImg = document.getElementById("logo-img");
 let questionImg = document.getElementById("question-img");
 let endImg = document.getElementById("end-img");
 let shuffledQuestions = [];
 let currentQuestionIndex = [];
+let removedQuestions = [];
+
+/* Score Variables */
+
 let score = 0;
 let scoreText = document.getElementById("score");
 let questionCounter = 0;
@@ -32,7 +44,7 @@ let correctAnswerCounter = 0;
 const scorePoints = 10;
 const maxQuestion = 12;
 
-/* Set Timer variables and set countdown interval to one second */
+/* Timer Variables */
 
 let timeleft = 16;
 let timer = document.getElementById("timer");
@@ -240,7 +252,7 @@ function nextQuestion() {
         answerButtons[i].classList.remove('btn-correct');
         answerButtons[i].classList.remove('btn-wrong');
     }
-    questions.splice(0, 1);
+    removedQuestions.push(...questions.splice(0, 1));
     counter = 0;
     if (questionCounter === 12) {
         nextButton.classList.remove('hide');
@@ -249,7 +261,6 @@ function nextQuestion() {
     } else {
         runGame();
     }
-    
 }
 
 /**
@@ -269,7 +280,6 @@ function endGame() {
         endImg.setAttribute('src', "assets/images/carpet-sad.png");
         finalScoreText.innerHTML = `Oh no! You only scored ${finalScore}. Better luck next time!`;
     }
-
 }
 
 /**
@@ -289,10 +299,15 @@ function resetGame() {
         answerButtons[i].classList.remove('btn-wrong');
     }
     nextButton.innerText = "Next";
+    restoreQuestions();
     correctAnswerCounter = 0;
     scoreText.innerText = `${correctAnswerCounter - correctAnswerCounter}`;
     runGame();
+}
 
+function restoreQuestions() {
+    questions.push(...removedQuestions);
+    removedQuestions.length = 0;
 }
 
 //List of Quiz questions
