@@ -121,6 +121,12 @@ Once an answer has been selected, depending on which button is pressed, various 
 
 ![Incorrect Answer Image](assets/readmeimages/incorrectanswer.PNG)
 
+Having finished building the quiz game, I decided that I could create an additional timer element to make the game more fun.  The user is given 15 seconds to answer each question, and the countdown begins as soon as the question is displayed. If an answer button is clicked within the 15 second limit, the timer stops and the user is given feedback on their response as normal. If the timer runs out and no answer has been selected, the correct answer and two incorrect answers are highlighted, no points are awarded, and the next button is displayed to continue on to the next question.
+
+A countdown stopwatch icon is displayed in 'Aladdin' red to stand out to the user and show them that a countdown has begun, and I set the font-weight of the numbers to bold to draw the eye.
+
+![Timeout Image](assets/readmeimages/timeout.PNG)
+
 [Back to top](<#contents>)
 
 ## End Page

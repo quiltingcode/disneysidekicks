@@ -32,10 +32,7 @@ let correctAnswerCounter = 0;
 const scorePoints = 10;
 const maxQuestion = 12;
 
-/* Set Timer variables and set countdown interval to
- * one second
-*/
-
+/* Set Timer variables and set countdown interval to one second */
 
 let timeleft = 16;
 let timer = document.getElementById("timer");

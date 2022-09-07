@@ -84,13 +84,22 @@ h4 {
 /* Timer Element */
 
 .timer-element {
-    margin-left: 32px;
-    background-color: white;
+    margin-left: 10%;
     color: black;
-    width: 50px;
+    width: 75px;
     height: 50px;
     border-radius: 50%;
-    /* border: 1px solid black; */
+    
+}
+
+#icon {
+    color: #d62828;
+    font-size: 3rem;
+    padding-right: 10px;
+}
+
+#timer {
+    font-weight: bold;
 }
 
 /* Answer Area */
@@ -172,11 +181,11 @@ h4 {
 }
 
 .btn-correct {
-    background-color: green;
+    background-color: #08bd11;
 }
 
 .btn-wrong {
-    background-color: red;
+    background-color: #d62828;
 }
 
 /* Media Queries */
@@ -208,6 +217,13 @@ h4 {
         text-align: left;
         font-size: 1.3rem;
         margin-left: 50px;
+    }
+
+    .timer-element {
+        width: 100px;
+        height: 50px;
+        
+        
     }
 
 }
