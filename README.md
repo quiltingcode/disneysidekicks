@@ -175,7 +175,7 @@ I used the following technologies to create this website:
 
 # Testing
 
-Please click [**_here_**](TESTING.md) to read more information about testing Love Andalucia
+Please click [**_here_**](TESTING.md) to read more information about testing Disney Sidekicks
 
 [Back to top](<#contents>)
 
@@ -229,6 +229,8 @@ The method from cloning a project from GitHub is below:
 * I used two different websites for help learning how to shuffle the questions array each time a game was started. I used [Geeks for Geeks](https://www.geeksforgeeks.org/shuffle-or-randomize-a-list-in-java/) and [Sebhastian.com](https://sebhastian.com/shuffle-array-javascript/#:~:text=A%20JavaScript%20array%20elements%20can,using%20the%20sort()%20method.&text=The%20JavaScript%20Array%20sort(),value%20returned%20by%20that%20function.)
 * The quiz questions were created with the aid of [Bustle.com](https://www.bustle.com/entertainment/91807-35-disney-sidekicks-ranked-from-meeko-flit-to-the-seven-dwarves)
 * I used a YouTube tutorial by [The Coding Train](https://www.youtube.com/watch?v=MLtAMg9_Svw) to learn how to add a countdown timer element to the page.
+* Information for how to start a countdown timer from a button click [W3Schools](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) 
+* Information for how to restore spliced items from an array [Stack Overflow](https://stackoverflow.com/questions/58220174/bring-all-items-back-in-an-array-after-using-splice-to-remove-them)
  
 
 ### Media
@@ -236,7 +238,9 @@ The method from cloning a project from GitHub is below:
   ** imgbin.com
   ** pngwing.com
 * The background image was sourced from https://fondosmil.com/disney
-* The question images were compressed using https://tinypng.com/ 
+* The question images were compressed using [TinyPNG](https://tinypng.com/)
+* The stopwatch icon is from [Font Awesome](https://fontawesome.com/v5/icons/stopwatch?s=regular&f=classic)
+* I used [remove.bg](https://www.remove.bg/upload) to remove the background on to the two magic carpet images used in the End Page.
 
 [Back to top](<#contents>)
 
