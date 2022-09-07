@@ -146,7 +146,7 @@ I used the Lighthouse test within Google Chrome Dev Tools to test the following:
 
 The results were overall very positive:
 
-![Lighthouse report](assets/readmeimages/lighthouse.PNG
+![Lighthouse report](assets/readmeimages/lighthouse.PNG)
 
 ## Peer Review
 
