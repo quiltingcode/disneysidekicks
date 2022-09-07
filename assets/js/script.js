@@ -179,8 +179,8 @@ function countdown() {
  */ 
 
 function timeout() {
-    console.log("Time has run out")
-    counter = 0
+    console.log("Time has run out");
+    counter = 0;
     for (let i = 0; i < answerButtons.length; i++) {
         if (answerButtons[i].innerHTML === questions[0].correct) {
             answerButtons[i].classList.add('btn-correct'); 
@@ -306,6 +306,7 @@ function resetGame() {
 }
 
 function restoreQuestions() {
+    console.log("Restoring questions");
     questions.push(...removedQuestions);
     removedQuestions.length = 0;
 }
