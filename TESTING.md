@@ -131,7 +131,7 @@ This left me with a simple issue of a global variable which I created initally, 
 
 ### Unresolved
 
-1. The 'Next' button is supposed to appear after the final answer has been selected, but on this occasion read 'End'. This is not essential but it indicates more clearly to the player that this was the final question and the game is over. The progress of the game is still always visible to the user, through the question number counter above the image, but I thought this was a nice additional feature to have in place. I don't know why the innerHTML on this button does not change for this last question. 
+1. In the console log, I can see that when the End Page is loaded, the countdown function is called, and the timer counts down and then times out. This makes no difference to the overall game functionality and the user can't see that this is happening unless they open the console. I have set the clearInterval function within the endGame function and the nextQuestion function if the user has reached question number 12, but this doesn't seem to work correctly. 
 
 ## Additional Testing
 

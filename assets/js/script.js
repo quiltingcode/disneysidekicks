@@ -259,6 +259,7 @@ function nextQuestion() {
     counter = 0;
     if (questionCounter === 12) {
         endGame();
+        clearInterval(myInterval);
     } else {
         runGame();
     }
@@ -301,6 +302,7 @@ function resetGame() {
         answerButtons[i].classList.remove('btn-wrong');
     }
     nextButton.innerText = "Next";
+    endImg.setAttribute('src', "assets/images/carpet.png");
     restoreQuestions();
     correctAnswerCounter = 0;
     scoreText.innerText = `${correctAnswerCounter - correctAnswerCounter}`;
