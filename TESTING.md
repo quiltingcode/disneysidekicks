@@ -129,6 +129,8 @@ The undefined 'i' variable that I had created was inside a loop to retrieve the 
 
 This left me with a simple issue of a global variable which I created initally, but never included in my functions in the end. I deleted this variable and re-ran the full length of code through the validator with no errors returned. 
 
+12. After playing the game, and getting a low score, the image changes to a sad carpet. Then if you choose to 'Play Again' and get a good score, the image doensn't change to a happy carpet. This is because I had forgotten to reset the default happy carpet image within the resetGame function. Once this was added in, the correct carpet appears on each 'Play Again' according to the score. 
+
 ### Unresolved
 
 1. In the console log, I can see that when the End Page is loaded, the countdown function is called, and the timer counts down and then times out. This makes no difference to the overall game functionality and the user can't see that this is happening unless they open the console. I have set the clearInterval function within the endGame function and the nextQuestion function if the user has reached question number 12, but this doesn't seem to work correctly. 
