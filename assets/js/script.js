@@ -37,10 +37,6 @@ let finalScore = document.getElementById("final-score");
 let finalScoreText = document.getElementById("final-score-text");
 let correctAnswerCounter = 0;
 
-/* Fixed Variables which define the points per correct question
- * and the maximum number of questions asked in one quiz game
-*/
-
 const scorePoints = 10;
 const maxQuestion = 12;
 
@@ -103,7 +99,7 @@ function rules() {
             <li>You will earn 10 points for each correct answer</li>
             <li>After each question, click next to continue</li>
         </ol>`;
-        rulesButton.classList.add('hide');
+    rulesButton.classList.add('hide');
 }
 
 /**

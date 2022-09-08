@@ -51,7 +51,7 @@ On devices with a height of 640 pixels, such as the Samsung mobile devices, once
 |Images|Pass|Pass|Pass|
 |Links|Pass|Pass|Pass|
 
-When I tested the form page on the Samsung Galaxy Tab 10, the background image was not reaching the bottom of the screen, so it was leaving a blank area across the bottom of the device. I changed the CSS styling of the background size from 'Auto' to '200rem' and I have re-tested. The image now seems to cover the full screen, on taller devices. I don't like it however that the image is moving on each click of the buttons. 
+When I tested the form page on the Samsung Galaxy Tab 10, the background image was not reaching the bottom of the screen, so it was leaving a blank area across the bottom of the device. I changed the CSS styling of the background size from 'Auto' to '200rem' and I have re-tested. The image now seems to cover the full screen, on taller devices. I don't like it however that the image is moving on each click of the buttons, so I have adjusted the CSS styling of the background image to set the background attachment to fixed. 
 
 ![tablet device view of quiz](assets/readmeimages/samsung-tablet-testing.PNG)
 
