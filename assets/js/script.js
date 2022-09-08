@@ -122,7 +122,7 @@ function runGame() {
     logoImg.classList.add('hide');
     currentQuestionIndex = [0];
     timer.innerHTML = timeleft;
-    
+    questionCounter++;
     questionTitle.innerText = `Question ${questionCounter} of ${maxQuestion}`;
     shuffle();
     countdown();
@@ -219,6 +219,9 @@ function checkAnswer() {
                 }
             } 
         } 
+        if (questionCounter === 12) {
+            nextButton.innerHTML = 'End';
+        } 
     nextButton.classList.remove('hide');
    
     for (let i = 0; i < answerButtons.length; i++) {
@@ -247,7 +250,6 @@ function checkAnswer() {
 */
 
 function nextQuestion() {  
-    questionCounter++;
     console.log("Generating next question...");
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].classList.remove('btn-correct');
@@ -256,13 +258,11 @@ function nextQuestion() {
     removedQuestions.push(...questions.splice(0, 1));
     counter = 0;
     if (questionCounter === 12) {
-        nextButton.innerText = 'End';
-        nextButton.classList.remove('hide');
-        
         endGame();
     } else {
         runGame();
     }
+ 
 }
 
 /**
