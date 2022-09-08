@@ -89,8 +89,7 @@ h4 {
     color: black;
     width: 75px;
     height: 50px;
-    border-radius: 50%;
-    
+    border-radius: 50%; 
 }
 
 #icon {
@@ -133,6 +132,10 @@ h4 {
 
 #score {
     margin: 5px;
+}
+
+#score-p {
+    margin: 7px;
 }
 
 /* End Page */
