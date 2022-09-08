@@ -75,7 +75,7 @@ However, having styled these into the backgruond, the colours appeared to me qui
 
 ![Colour Palette image](assets/readmeimages/topography.PNG)
 
-From this 'princess' colour scheme, I chose to style the background and game area container with a combination of the #a4def9 and the #c59fc9 tones, which looked nice, and to me represent a combination of a classic 'Cinderella' tone with a more modern background 'Rapunzel' tone. 
+From this 'princess' colour scheme, I chose to style the background and game area container with a combination of the #a4def9 and the #c59fc9 tones, which looked nice, and to me represented a combination of a classic 'Cinderella' tone with a more modern background 'Rapunzel' tone. 
 
 When I took a step back and looked at these through the [Am I Responsive](https://ui.dev/amiresponsive) Mockup website, I still thought it looked a bit plain. 
 
@@ -98,7 +98,7 @@ At the top of the website is the main title and an introduction to the quiz. The
 
 ## Rules Page
 
-If the user is unsure of how to play a quiz game, at the bottom of the Home Page they can select the 'Rules' button which will show them a set of simple instructions. Under the rules there is a button option to 'Start' the game.  
+If the user is unsure of how to play a quiz game, at the bottom of the Home Page they can select the 'Rules' button which will show them a set of simple instructions. Under the rules there is a button to start the game.  
 
 ![Rules Page image](assets/readmeimages/rules.PNG)
 
@@ -110,9 +110,11 @@ Once the user has selected the 'Start Quiz' button from either the Home page or 
 
 At the top of the quiz area, the user is told which question they are on out of a total of 12 questions. Each time the quiz is played, a new random selection of questions will be drawn from the questions array.
 
+At the moment, there is a total of 30 questions in the questions array, of which 12 are randomly selected each time the game is played. 
+
 Next, an image is displayed which changes according to the particular question drawn. Under the image, the user can read the quiz question and three possible answers displayed in clickable buttons. Finally the user can see their score throughout the quiz. 
 
-Once an answer has been selected, depending on which button is pressed, various things may or may not occur. If the user selects the correct answer, the selected button will turn green to tell the user that it's correct, the score will go up by 10 points, and a 'Next' button will appear to move on to the next question. If however the user selects an incorrect answer, the selected button will turn red, the correct answer will turn green to show which button the user should have chosen, the score does not change, and the 'Next' button will appear to move on to the next question. 
+Once an answer has been selected, depending on which button is pressed, various things may or may not occur. If the user selects the correct answer, the selected answer button will turn green to indicate to the user that it's correct, the score will go up by 10 points, and a 'Next' button will appear to move on to the next question. If however the user selects an incorrect answer, the selected button will turn red, the correct answer will turn green to show which button the user should have chosen, the score does not change, and the 'Next' button will appear to move on to the next question. 
 
 
 ![Quiz Page Image](assets/readmeimages/quizpage.PNG)
@@ -131,7 +133,7 @@ A countdown stopwatch icon is displayed in 'Aladdin' red to stand out to the use
 
 ## End Page
 
-Once 12 questions have been answered, when the user clicks the 'Next' button the quiz is finished, the questions disappear and they are replaced by a summary of how well the user did. If they score more than 80 points, they will see an image of a very happy Sidekick and a message congratulating them on their score.
+Once 12 questions have been answered, when the user clicks the 'End' button the quiz is finished, the questions disappear and they are replaced by a summary of how well the user did. If they score more than 80 points, they will see an image of a very happy Sidekick and a message congratulating them on their score.
 
 ![End Page High Score Image](assets/readmeimages/highscore-endpage.PNG)
 
@@ -139,7 +141,7 @@ if the player gets 80 points or lower, they will see an image of Aladdin's magic
 
 ![End Page Low Score Image](assets/readmeimages/lowscore-endpage.PNG)
 
-In both cases, the user has two button options for how to continue from this screen. They can select 'Play Again' which will reset the quiz, select a new set of question, set their score back to zero and present them with a new question. Or they can select 'Home' which will take them back to the Home Page.
+In both cases, the user has two button options for how to continue from this screen. They can select 'Play Again' which will reset the quiz, select a new set of questions, set their score back to zero and present them with a new question. Or they can select 'Home' which will take them back to the Home Page.
 
 
 [Back to top](<#contents>)
@@ -150,7 +152,7 @@ In the future, I would like to add more features to the Disney Sidekicks Quiz. T
 
 * Music-related questions with audio elements
 * Add more questions to the questions array as new Disney films are released. 
-* Eventually I could expand on my theme of Disney quizzes, and offer a list of categories for the player to choose from. For exmaple:
+* Eventually I could expand on my theme of Disney quizzes, and offer a list of categories for the player to choose from on the home page. For example:
   * Disney Villains
   * Disney Princesses
   * Disney Theme Tunes
@@ -229,14 +231,14 @@ The method from cloning a project from GitHub is below:
 * I used two different websites for help learning how to shuffle the questions array each time a game was started. I used [Geeks for Geeks](https://www.geeksforgeeks.org/shuffle-or-randomize-a-list-in-java/) and [Sebhastian.com](https://sebhastian.com/shuffle-array-javascript/#:~:text=A%20JavaScript%20array%20elements%20can,using%20the%20sort()%20method.&text=The%20JavaScript%20Array%20sort(),value%20returned%20by%20that%20function.)
 * The quiz questions were created with the aid of [Bustle.com](https://www.bustle.com/entertainment/91807-35-disney-sidekicks-ranked-from-meeko-flit-to-the-seven-dwarves)
 * I used a YouTube tutorial by [The Coding Train](https://www.youtube.com/watch?v=MLtAMg9_Svw) to learn how to add a countdown timer element to the page.
-* Information for how to start a countdown timer from a button click [W3Schools](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) 
-* Information for how to restore spliced items from an array [Stack Overflow](https://stackoverflow.com/questions/58220174/bring-all-items-back-in-an-array-after-using-splice-to-remove-them)
+* Information for how to start a countdown timer from a button click was found at [W3Schools](https://www.w3schools.com/jsref/met_element_addeventlistener.asp) 
+* Information for how to restore spliced items from an array was found at [Stack Overflow](https://stackoverflow.com/questions/58220174/bring-all-items-back-in-an-array-after-using-splice-to-remove-them)
  
 
 ### Media
 * The images used in this website were sourced from:
-  ** imgbin.com
-  ** pngwing.com
+  * imgbin.com
+  * pngwing.com
 * The background image was sourced from https://fondosmil.com/disney
 * The question images were compressed using [TinyPNG](https://tinypng.com/)
 * The stopwatch icon is from [Font Awesome](https://fontawesome.com/v5/icons/stopwatch?s=regular&f=classic)
@@ -245,7 +247,7 @@ The method from cloning a project from GitHub is below:
 [Back to top](<#contents>)
 
 # Acknowledgements
-The site was completed as a Portfolio 2 Project piece for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/). As such I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), the Slack community, and all at the Code Institute for their help and support. I love Disney, and it was a joy to be able to create a quiz dedicated to somethin i'm really passionate about.
+The site was completed as a Portfolio Project 2 piece for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/). As such I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), the Slack community, and all at the Code Institute for their help and support. I love Disney, and it was a joy to be able to create a quiz dedicated to something I'm really passionate about.
 
 Kelly Hutchison 2022.
 
